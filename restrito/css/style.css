@@ -1,0 +1,301 @@
+@font-face {
+	font-family: 'icons';
+	src: url('../fonts/fontawesome-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+*, *::before, *::after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+} 
+
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+	list-style: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+} 
+
+html, body{
+	height: 100%;
+}
+
+.header{
+	border-bottom: 1px solid  #ffffff;
+	background-color: #1682ba;
+	height: 60px;
+}
+
+.logo img{
+	height: 50px;
+	width: auto;
+	margin: 5px 5px;
+}
+
+dropdown{
+	margin: 15px 0px; 
+	float: right;
+	color: black;
+	text-align: right;
+}
+
+dropdown label, dropdown ul li{
+	display: block;
+}
+dropdown ul li:hover{
+	background: #1682BA;
+	color: #ffffff;
+	cursor: pointer;
+}
+
+dropdown label:hover{
+	cursor: pointer;	
+}
+
+dropdown label{
+	color: #ffffff;
+	position: relative;
+	z-index: 2;
+	padding-bottom: 10px;
+	padding-right: 10px;
+}
+
+dropdown label .icon{
+	font-size: 30px;
+}
+
+dropdown ul li{
+	background: #A6DCF7;
+	width: 150px;
+	padding: 10px 20px;
+	border-bottom: 1px solid #ffffff;
+	text-align: center;
+	box-shadow: -5px 5px 10px #3489C8;
+	-moz-box-shadow: -5px 5px 10px #3489C8;
+	-webkit-box-shadow: -5px 5px 10px #3489C8;
+}
+
+dropdown ul li:last-child{
+	border-bottom: none;
+}
+
+dropdown input{
+	display: none;
+}
+
+dropdown input ~ ul{
+	position: relative;
+	visibility: hidden;
+	opacity: 0;
+	top: -20px;
+	z-index: 1;
+}
+
+dropdown input:checked + label{
+	color: #ffffff;
+}
+
+dropdown input:checked ~ ul{
+	visibility: visible;
+	opacity: 1;
+	top: 0;
+}
+
+.menu{
+	float: left;
+	width: 200px;
+	height: auto;
+	height: 90%;
+	min-height: -webkit-calc(100% - 60px);
+	min-height: -moz -calc(100% - 60px);
+	min-height: calc(100% -60px);
+	background-color: #A6DCF7;
+
+}
+
+#navmenu,
+#navmenu ul,
+#navmenu ul li,
+#navmenu ul li a {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	list-style: none;
+	line-height: 1;
+	display: block;
+	position: relative;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#navmenu {
+	width: 200px;
+	font-family: Helvetica, Arial, sans-serif;
+	color: #ffffff;
+}
+#navmenu ul ul {
+	display: none;
+}
+.align-right {
+	float: right;
+}
+#navmenu > ul > li > a {
+	padding: 15px 20px;
+	border-left: 1px solid #1682ba;
+	border-right: 1px solid #1682ba;
+	border-top: 1px solid #1682ba;
+	cursor: pointer;
+	z-index: 2;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #ffffff;
+	background: #36aae7;
+	background: -webkit-linear-gradient(#36aae7, #1fa0e4);
+	background: -moz-linear-gradient(#36aae7, #1fa0e4);
+	background: -o-linear-gradient(#36aae7, #1fa0e4);
+	background: -ms-linear-gradient(#36aae7, #1fa0e4);
+	background: linear-gradient(#36aae7, #1fa0e4);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+#navmenu > ul > li > a:hover,
+#navmenu > ul > li.active > a,
+#navmenu > ul > li.open > a {
+	color: #eeeeee;
+	background: #1fa0e4;
+	background: -webkit-linear-gradient(#1fa0e4, #1992d1);
+	background: -moz-linear-gradient(#1fa0e4, #1992d1);
+	background: -o-linear-gradient(#1fa0e4, #1992d1);
+	background: -ms-linear-gradient(#1fa0e4, #1992d1);
+	background: linear-gradient(#1fa0e4, #1992d1);
+}
+#navmenu > ul > li.open > a {
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.15);
+	border-bottom: 1px solid #1682ba;
+}
+#navmenu > ul > li:last-child > a,
+#navmenu > ul > li.last > a {
+	border-bottom: 1px solid #1682ba;
+}
+.holder {
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.holder::after,
+.holder::before {
+	display: block;
+	position: absolute;
+	content: "";
+	width: 6px;
+	height: 6px;
+	right: 20px;
+	z-index: 10;
+	-webkit-transform: rotate(-135deg);
+	-moz-transform: rotate(-135deg);
+	-ms-transform: rotate(-135deg);
+	-o-transform: rotate(-135deg);
+	transform: rotate(-135deg);
+}
+.holder::after {
+	top: 17px;
+	border-top: 2px solid #ffffff;
+	border-left: 2px solid #ffffff;
+}
+#navmenu > ul > li > a:hover > span::after,
+#navmenu > ul > li.active > a > span::after,
+#navmenu > ul > li.open > a > span::after {
+	border-color: #eeeeee;
+}
+.holder::before {
+	top: 18px;
+	border-top: 2px solid;
+	border-left: 2px solid;
+	border-top-color: inherit;
+	border-left-color: inherit;
+}
+#navmenu ul ul li a {
+	cursor: pointer;
+	border-bottom: 1px solid #ffffff;
+	border-left: 1px solid #A6DCF7;
+	border-right: 1px solid #A6DCF7;
+	padding: 10px 20px;
+	z-index: 1;
+	text-decoration: none;
+	font-size: 13px;
+	color: #000000;
+	background: #A6DCF7;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+#navmenu ul ul li:hover > a,
+#navmenu ul ul li.open > a,
+#navmenu ul ul li.active > a {
+	background: #1682BA;
+	color: #ffffff;
+}
+#navmenu ul ul li:first-child > a {
+	box-shadow: none;
+}
+#navmenu ul ul ul li:first-child > a {
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+#navmenu ul ul ul li a {
+	padding-left: 30px;
+}
+#navmenu > ul > li > ul > li:last-child > a,
+#navmenu > ul > li > ul > li.last > a {
+	border-bottom: 0;
+}
+#navmenu > ul > li > ul > li.open:last-child > a,
+#navmenu > ul > li > ul > li.last.open > a {
+	border-bottom: 1px solid #32373e;
+}
+#navmenu > ul > li > ul > li.open:last-child > ul > li:last-child > a {
+	border-bottom: 0;
+}
+#navmenu ul ul li.has-sub > a::after {
+	display: block;
+	position: absolute;
+	content: "";
+	width: 5px;
+	height: 5px;
+	right: 20px;
+	z-index: 10;
+	top: 11.5px;
+	border-top: 2px solid #eeeeee;
+	border-left: 2px solid #eeeeee;
+	-webkit-transform: rotate(-135deg);
+	-moz-transform: rotate(-135deg);
+	-ms-transform: rotate(-135deg);
+	-o-transform: rotate(-135deg);
+	transform: rotate(-135deg);
+}
+#navmenu ul ul li.active > a::after,
+#navmenu ul ul li.open > a::after,
+#navmenu ul ul li > a:hover::after {
+	border-color: #ffffff;
+}
+
+.content{
+	border: 2px solid  black;
+	margin-left: 200px;
+}
+
+.icon{
+	font-family: 'icons';
+	font-size: 20px;
+	margin-right: 3px;
+}
+
+.icon-navbar::before{
+	content: '\f0c9';
+}
