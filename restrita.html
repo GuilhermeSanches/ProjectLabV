@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+       
+        <!-- Favicon Icon -->
+        
+       <link rel="shortcut icon" href="imagens/favicon2.png"/>
+       
+       <!-- Styles -->
+       
+       <link href="css/restrita/restrita.css" rel="stylesheet" />
+       <link rel="stylesheet" href="css/frames/frame.css"/>
+        
+                    
+        <!-- Libraries -->
+        
+        
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script> 
+         <script src="http://code.highcharts.com/highcharts.js"></script>
+         <script src="http://code.highcharts.com/modules/exporting.js"></script>
+        
+        
+        
+       <title>Travel Manager</title> 
+</head>
+<body>
+       <div id="black_overlay"></div>
+        <header>
+              
+            <!-- Menu Left DropDown -->  
+              
+               <nav id="nav" class="nav_left">
+                <ul>
+                        <li><div> VIAGENS</div> 
+                          <ul>
+                              <li><a href="#" onclick="Index_frameViagem.abrirFrameViagens();">Cadastrar</a></li>
+                              <li><a href="#">Editar</a></li>
+                              <li><a href="#">Excluir</a></li>                              
+                          </ul>
+                    </li>   
+                        <li><div>LANÇAMENTOS</div>
+                        <ul>
+                              <li><a href="#" onclick="Index_frame.abrirFrame();Index_get_viagens.inicializar();">Cadastrar</a></li>
+                              <li><a href="#">Editar</a></li>
+                              <li><a href="#">Excluir</a></li>                              
+                          </ul>
+                    </li>  
+                        <li><div>CATEGORIAS</div>
+                         <ul>
+                              <li><a href="#">Cadastrar</a></li>
+                              <li><a href="#">Editar</a></li>
+                              <li><a href="#">Excluir</a></li>                              
+                          </ul>
+                    </li>  
+                        <li>RELATÓRIOS</li>                                            
+                </ul>
+         </nav>
+              
+             <!-- Menu Right -->  
+               
+                <nav class="nav_right">
+                <ul>
+                        <li>Configuracões de conta</li>
+                        <li><a href="php/Logout/logout.php">Sair</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Fim do Cabeçalho -->         
+            
+        </header>
+        
+        <!-- Menu Lateral  -->  
+        
+    <div id="menu_lateral">
+               <div class="menu_lat"><a href="#" onclick="Resume_getDados.inicializar(101);"><img 
+src="imagens/bot_moradia_ativo.jpg" alt=""></a></div>
+               <div class="menu_lat"><a href="#" onclick="Resume_getDados.inicializar(102);"><img src="imagens/bot_alimentacao_ativo.jpg" alt=""></a></div>
+               <div class="menu_lat"><a href="#" onclick="Resume_getDados.inicializar(103);"><img src="imagens/bot_transporte_ativo.jpg" alt=""></a></div>
+               <div class="menu_lat"><a href="#" onclick="Resume_getDados.inicializar(104);"><img src="imagens/bot_comunicacao_ativo.jpg" alt=""></a></div>
+               <div class="menu_lat"><a href="#" onclick="Resume_getDados.inicializar(105);"><img src="imagens/bot_lazer_ativo.jpg" alt=""></a></div>          
+               <div class="menu_lat"><a href="#" onclick="Resume_getDados.inicializar(106);"><img src="imagens/bot_saude_ativo.jpg" alt=""></a></div>          
+               <div class="menu_lat"><a href="#" onclick="Resume_getDados.inicializar(107);"><img src="imagens/bot_diversos_ativo.jpg" alt=""></a></div>                    
+                
+    </div>
+      
+      <!-- Frame Despesas  -->  
+      
+       <div id="white_content" class="frame">
+             <div class="fechar">
+                <a href = "javascript:void(0)" onclick ="document.getElementById('white_content').style.display='none';document.getElementById('black_overlay').style.display='none'">Fechar[X]
+                </a>
+             </div>
+            <form action="" class="form_viagem" name="form_gravar" method="post">
+              <label for="">Escolha a viagem</label>
+                <select name="comboViagem" id="comboViagem">  
+                <option value="aguarde...">Aguarde...</option>                                         
+               </select>
+               <label>Escolha a Categoria</label>
+               <select name="combo" id="combo">
+                   <option selected value="101">Moradia</option>
+                   <option value="102">Alimentação</option>
+                   <option value="103">Transporte</option>
+                   <option value="104">Comunicação</option>
+                   <option value="105">Lazer</option>
+                   <option value="106">Saúde</option>
+                   <option value="107">Diversos</option>                   
+               </select>
+               <label for="">Valor: </label>
+               <input type="text" name="Valor">
+               <label for="">Data: </label>
+               <input type="date" name="data_lanc" value="">
+               <input type="submit" name="gravar" id="gravar" value="Gravar">
+           
+       </form>
+       </div>   
+       
+             <!-- Frame Viagens  -->  
+             
+        <div id="frame_viagem" class="frame">
+           <div class="fechar">
+              <a href = "javascript:void(0)" onclick = "document.getElementById('frame_viagem').style.display='none';document.getElementById('black_overlay').style.display='none'">Fechar[X]</a>
+        </div>
+           <form action="" name="form_viagem" class="form_viagem" method="post">
+               <label>Cadastro de Viagens</label>
+               
+               <label for="">Local: </label>
+               <input type="text" name="Local">
+               <label for="">Data Partida: </label>
+               <input type="date" name="dateCheckin">
+               <label for="">Data Retorno: </label>
+               <input type="date" name="dateCheckout">
+               <label for="">Valor Previsto: </label>
+               <input type="text" name="valorP">
+               <label for="">Valor Limite: </label>
+               <input type="text" name="ValorL">
+               <input type="submit" name="gravar_viagem" id="gravar_viagem" value="Gravar">           
+       </form>
+   </div>       
+    
+    <article>
+    
+     <div id="conteudo_pagina">              
+      <div id="conteudo_total">      
+       <div id="conteudo_resumo">       
+        <div id="resumo">
+              
+        </div>
+      </div>
+    </div>
+       
+        <div  id="container" >                
+   </div>
+   </div>
+    </article>            
+
+    
+        <!-- Scripts -->      
+        
+         <script src="js/Highchart/jsGrafico1.js"></script>
+         <script src="js/Scroll_Efect/restritajs.js"></script>
+         <script src="js/Ajax/Restrita/ajaxGetDados.js"></script>
+         <script type="text/javascript" src="js/Ajax/Restrita/ajaxGetViagens.js"></script>
+         <script src="js/Ajax/Restrita/index_gravar_dados.js"></script>
+         <script src="js/Ajax/Restrita/index_gravar_viagem.js"></script>
+         <script src="js/Frames/frame.js"></script>
+         <script src="js/Form/Form.js"></script>
+         <script src="js/Security/verifica_sessao.js"></script>
+         
+        </body>
+    </html>

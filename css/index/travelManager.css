@@ -1,0 +1,340 @@
+.header-site{
+    position: fixed;    
+    background-image: url(../../imagens/header.jpg);        
+    height: 529px;
+    width: 100%;
+    left: 0px;
+    top: 0px;  
+       -moz-transition: all .615s ease-in-out;
+        -webkit-transition: all .615s ease-in-out;
+        -o-transition: all .615s ease-in-out;
+        -ms-transition: all .615s ease-in-out;
+        transition: all .615s ease-in-out;
+   
+}
+
+.header{
+    position: fixed;
+    background-color: #097FAD;
+    opacity: 0.85;
+    height: 529px;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    
+}
+
+.botaoCad{
+    margin-left: 1070px;
+    margin-top: -40px;
+    border-radius: 15px;
+    padding: 10px;
+    cursor: pointer;
+    width: 140px;
+    background-color: white;
+     -moz-transition: all .615s ease-in-out;
+        -webkit-transition: all .615s ease-in-out;
+        -o-transition: all .615s ease-in-out;
+        -ms-transition: all .615s ease-in-out;
+        transition: all .615s ease-in-out;
+    
+    
+}
+
+.botaoCad:hover{
+    opacity: 0.54;
+    
+
+}
+
+.botaoCad a{
+    text-decoration: none;
+    display: inline-block;
+    color: #097FAD;    
+    
+}
+
+.header-nav{
+
+    width: 1000px;
+    margin-left:300px;
+    margin-top: -200px;
+    
+}
+.nav{
+        width: 400px;    
+        margin-left: -120px;
+        line-height: 3.25em;
+		text-align: center;        
+        font-family: 'open_sansregular', Helvetica, Arial, Geneva, sans-serif;	
+		cursor: default;            
+}
+
+.nav li{
+        
+    display: inline-block;
+    color: white;
+    padding-left: 60px;
+    margin-left: 10px;
+       -moz-transition: all .615s ease-in-out;
+        -webkit-transition: all .615s ease-in-out;
+        -o-transition: all .615s ease-in-out;
+        -ms-transition: all .615s ease-in-out;
+        transition: all .615s ease-in-out;
+    
+}
+a{
+    display: inline-block;
+    color: white;
+}
+
+
+.nav-right{
+        margin-left: 750px;
+        margin-top: -65px;
+        width: 300px;           
+        line-height: 3.25em;		
+        font-family: 'open_sansregular', Helvetica, Arial, Geneva, sans-serif;	
+		cursor: default;
+
+}
+
+.nav-right div{
+
+       display: block;
+       color: white;
+       cursor: pointer;
+      
+     
+}
+#login3{
+
+
+text-decoration: underline;
+     -moz-transition: all .615s ease-in-out;
+        -webkit-transition: all .615s ease-in-out;
+        -o-transition: all .615s ease-in-out;
+        -ms-transition: all .615s ease-in-out;
+        transition: all .615s ease-in-out;
+
+}
+
+#rec_senha{
+    margin-top: -20px;
+    margin-left: 200px;
+    font-size: 12px;
+    text-decoration: underline;
+    
+}
+
+#nav_right_login{
+            position: absolute;  
+            margin-left: -100px;
+            margin-top: -2px;
+            font: 8px;
+            display: none;
+            opacity: 1;   
+            
+
+            
+
+}
+
+#container_rec_senha{
+        position: absolute;
+        display: none;
+        
+
+}
+
+#form2{
+    display: block;
+
+}
+
+#usuario, #senha, #email{
+    border-radius: 5px;
+    border: 0px solid;
+
+}
+.entrar{
+    position: absolute;    
+    top: 10px;
+    left: 470px;
+    text-align: center;
+    padding-bottom: 5px;        
+    font-size: 14px;
+    background-color: white;
+    border-radius: 6px;
+    border: 0px solid;
+    color: #097FAD;  
+    cursor: pointer;
+    width: 60px;
+    height: 30px;                
+}
+#senha_rec{
+    position: absolute;    
+    top: 10px;
+    left: 360px;
+    text-align: center;
+    padding-bottom: 5px;        
+    font-size: 14px;
+    background-color: white;
+    border-radius: 6px;
+    border: 0px solid;
+    color: #097FAD;  
+    cursor: pointer;
+    width: 100px;
+    height: 30px;
+    
+    
+
+}
+
+
+div, body, nav{
+
+}
+.logo{    
+    
+    background-image: url(../../imagens/icone2.fw.png);
+    width: 300px;
+    height: 180px;
+      -moz-transition: all .615s ease-in-out;
+        -webkit-transition: all .615s ease-in-out;
+        -o-transition: all .615s ease-in-out;
+        -ms-transition: all .615s ease-in-out;
+        transition: all .615s ease-in-out;
+
+}
+
+.txtHeader{
+    position: absolute;
+    font-size: 36px;
+    color: white;
+    top: 270px;    
+    width: 400px;
+    margin-left: 300px;
+    text-align: right;
+     -moz-transition: all .615s ease-in-out;
+        -webkit-transition: all .615s ease-in-out;
+        -o-transition: all .615s ease-in-out;
+        -ms-transition: all .615s ease-in-out;
+        transition: all .615s ease-in-out;
+
+
+}
+.pipeline{
+    margin-left: 100px;    
+    width: 20px;
+    margin-left: 430px;
+    margin-top: -80px;
+    
+}
+.icon{
+    margin-left: 300px;    
+    width: 20px;
+    margin-left: 470px;
+    margin-top: -120px;
+    
+}
+
+
+body{
+    z-index: 1001;
+}
+
+.body-2{
+    
+    position: absolute;
+    text-align: center;
+    left: 0px;
+    z-index: 1002;
+    top: 1018px;
+    width: 100%; 
+    height: 580px;
+    background-color: #097FAD;
+      -moz-transition: all .615s ease-in-out;
+        -webkit-transition: all .615s ease-in-out;
+        -o-transition: all .615s ease-in-out;
+        -ms-transition: all .615s ease-in-out;
+        transition: all .615s ease-in-out;
+
+}
+.body-2 img{
+    margin-top: -80px;
+      -moz-transition: all .615s ease-in-out;
+        -webkit-transition: all .615s ease-in-out;
+        -o-transition: all .615s ease-in-out;
+        -ms-transition: all .615s ease-in-out;
+        transition: all .615s ease-in-out;
+
+}
+
+.body-3{
+    
+    position: absolute;
+    text-align: center;
+    z-index: 1003;
+    left: 0px;
+    top: 1488px;
+    width: 100%;  
+    height: 420px;
+    background-color: white;
+
+}
+
+.body-4{
+    
+    position: absolute;
+    text-align: center;
+    z-index: 1004;
+    left: 0px;
+    top: 1900px;
+    width: 100%;    
+    height: 250px;
+    background-color: #097FAD;
+
+}
+
+.body-4 img{
+margin-top: 20px;
+}
+
+.body-5{
+    
+    position: absolute;
+    text-align: center;
+    z-index: 1005;
+    font-size: 20px;
+    left: 0px;
+    top: 2070px;
+    width: 100%; 
+    height: 700px;
+    background-color: #CACAD9;
+
+}
+.body-5 img{
+    padding: 10px;
+}
+
+
+
+.body-1{                
+    position: absolute;
+    left: 0px;
+    top: 529px;
+    width: 100%;
+    z-index: 1001;
+    text-align: center;
+    font-size: 20px;
+    height: 500px;
+    display: table;
+    background-color: white;
+       -moz-transition: all .615s ease-in-out;
+        -webkit-transition: all .615s ease-in-out;
+        -o-transition: all .615s ease-in-out;
+        -ms-transition: all .615s ease-in-out;
+        transition: all .615s ease-in-out;
+
+}

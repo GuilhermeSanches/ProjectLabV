@@ -1,0 +1,38 @@
+#form3 label, #form3 input{
+    display: block;
+    width: 70%;
+    margin-left: 60px;
+    
+}
+
+
+
+fieldset{
+    
+    z-index: 1005;        
+    display: block;
+    width: 400px;    
+    background: #097FAD;
+    margin: auto;
+    margin-top:  auto;
+    border-radius: 10px;
+    border: 0px solid #fff;
+    box-shadow: 6px 6px 144px 0px rgba(0,0,0,0.75);
+    color: white;
+    
+}
+
+#bd5p{   
+        padding-bottom: 15px;
+        margin:  auto;
+        width: 80%;        
+
+}
+
+#form3 input[type=submit]{
+    margin-left: 150px;
+    width: 80px;
+}
+
+
+

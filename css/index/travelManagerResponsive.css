@@ -1,0 +1,136 @@
+@media only screen
+and (min-width : 1024px)
+and (max-width : 1224px) {
+    
+    .header-site{
+   
+    height: 529px;    
+    }
+    
+    
+    .botaoCad{
+    margin-left: 850px;
+    
+    }
+    .body-1{
+    top: 529px;
+    }
+    
+    .body-2{
+    top: 818px;
+    }
+    
+    .body-3{
+    top: 1288px;
+    }
+    
+    .body-4{
+    top: 1700px;
+    }
+    
+    .body-5{
+    top: 1870px;
+        height: 800px;
+    }
+    
+    .nav li{
+    margin-left: -200px;        
+    }
+    
+    .nav-right li{
+    margin-left: -200px;        
+    }
+    
+    .header{
+        height: 529px;
+    }
+   
+    
+    .txtHeader{
+        
+        margin: 10px 200px;
+        
+    }
+    
+    #login3{
+        margin-left: -240px;
+    }
+    
+    #nav_right_login{
+    
+         margin-left: -280px;
+    }
+    
+    #container_rec_senha{
+        margin-left: -280px;
+    
+    }
+}
+
+@media only screen and (min-width : 180px) and (max-width : 1024px) {
+    
+    .header-site{
+           
+    height: 529px;    
+    }
+    
+    
+    .botaoCad{
+    margin-left: 80%;
+    
+    }
+  
+      .body-1{
+    top: 529px;
+    }
+    
+    .body-2{
+    top: 818px;
+    }
+    
+    .body-3{
+    top: 1288px;
+    }
+    
+    .body-4{
+    top: 1700px;
+    }
+    
+    .body-5{
+        top: 1870px;
+        height: 800px;
+    }
+    
+.nav{
+    display: none;
+}
+    
+    .nav-right li{
+    margin-left: -160%;        
+    }
+    
+   
+    
+    .txtHeader{
+        margin-left: 100px;
+        margin-top: 30px;
+    }
+    
+    #login3{
+        margin-left: -150%;
+        margin-top: 15px;
+    }
+    #nav_right_login{
+    
+         margin-left: -500px;
+        margin-top: 15px;
+    }
+    
+        #container_rec_senha{
+        margin-left: -500px;
+        margin-top: 15px;
+    
+    }
+    
+}
+
