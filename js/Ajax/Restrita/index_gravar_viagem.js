@@ -33,6 +33,7 @@ var Index_gravar_viagem = {
                 			alert("Viagem Gravada com Sucesso");
                             document.getElementById('frame_viagem').style.display='none';
                             document.getElementById('black_overlay').style.display='none';
+                            document.form_viagem.reset(); //resetar campos do formulário
                             document.reload;
                             
                 		}else if(sucess==3)

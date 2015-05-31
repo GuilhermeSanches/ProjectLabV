@@ -11,6 +11,7 @@
        
        <link href="css/restrita/restrita.css" rel="stylesheet" />
        <link rel="stylesheet" href="css/frames/frame.css"/>
+       <link rel="stylesheet" href="css/restrita/table.css">
         
                     
         <!-- Libraries -->
@@ -35,8 +36,7 @@
                         <li><div> VIAGENS</div> 
                           <ul>
                               <li><a href="#" onclick="Index_frameViagem.abrirFrameViagens();">Cadastrar</a></li>
-                              <li><a href="#">Editar</a></li>
-                              <li><a href="#">Excluir</a></li>                              
+                              <li><a href="#" onclick="ViagensControler.inicializar();">Listar</a></li>                            
                           </ul>
                     </li>   
                         <li><div>LANÇAMENTOS</div>
@@ -121,19 +121,25 @@ src="imagens/bot_moradia_ativo.jpg" alt=""></a></div>
            <div class="fechar">
               <a href = "javascript:void(0)" onclick = "document.getElementById('frame_viagem').style.display='none';document.getElementById('black_overlay').style.display='none'">Fechar[X]</a>
         </div>
-           <form action="" name="form_viagem" class="form_viagem" method="post">
+           <form action="" id="form_viagem" name="form_viagem" class="form_viagem" method="post">
                <label>Cadastro de Viagens</label>
                
                <label for="">Local: </label>
-               <input type="text" name="Local">
+               <input type="text" name="local" required>
+               <label for="">Cidade: </label>
+               <input type="text" name="cidade">
+               <label for="">País: </label>
+               <input type="text" name="pais">                              
                <label for="">Data Partida: </label>
-               <input type="date" name="dateCheckin">
+               <input type="date" name="dateCheckin" pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="dd/mm/aaaa" required>
                <label for="">Data Retorno: </label>
-               <input type="date" name="dateCheckout">
+               <input type="date" name="dateCheckout" pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="dd/mm/aaaa" required>
                <label for="">Valor Previsto: </label>
-               <input type="text" name="valorP">
+               <input type="text" name="valorP" required>
                <label for="">Valor Limite: </label>
-               <input type="text" name="ValorL">
+               <input type="text" name="valorL" required>
+               <label for="">Observação: </label>
+               <textarea name="observacao"></textarea>
                <input type="submit" name="gravar_viagem" id="gravar_viagem" value="Gravar">           
        </form>
    </div>       
@@ -144,13 +150,32 @@ src="imagens/bot_moradia_ativo.jpg" alt=""></a></div>
       <div id="conteudo_total">      
        <div id="conteudo_resumo">       
         <div id="resumo">
-              
+                         
         </div>
       </div>
     </div>
-       
-        <div  id="container" >                
-   </div>
+       <div  id="container" ></div> 
+
+        
+        <div id="listaViagens">
+           <div class="table">
+               <span class="title">Viagens Realizadas</span>
+            <table id=tabelaViagens>
+                    <thead>
+                        <tr>
+                            <th>Local</th>
+                            <th>Data Partida</th>
+                            <th>Data Retorno</th>
+                            <th>Total Gasto</th>
+                            <th>Editar</th>
+                            <th>Excluir</th>
+                        </tr>
+                    </thead>
+                    <tbody id="conteudoTabelaViagens"></tbody>
+            </table>
+            </div>
+    </div>
+        
    </div>
     </article>            
 
@@ -161,6 +186,7 @@ src="imagens/bot_moradia_ativo.jpg" alt=""></a></div>
          <script src="js/Scroll_Efect/restritajs.js"></script>
          <script src="js/Ajax/Restrita/ajaxGetDados.js"></script>
          <script type="text/javascript" src="js/Ajax/Restrita/ajaxGetViagens.js"></script>
+         <script type="text/javascript" src="js/Ajax/Restrita/ajaxGetListaViagens.js"></script>         
          <script src="js/Ajax/Restrita/index_gravar_dados.js"></script>
          <script src="js/Ajax/Restrita/index_gravar_viagem.js"></script>
          <script src="js/Frames/frame.js"></script>

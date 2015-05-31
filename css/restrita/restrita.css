@@ -180,6 +180,7 @@ article{
     padding-bottom: 10px;
     border-bottom: 2px solid #EDEEEE;
 }
+
 div{
     
 }
@@ -213,3 +214,15 @@ div{
 
 }
 
+#listaViagens{
+	width: 100%;
+	display: none;
+}
+
+#listaViagens .remove-icon{
+	height: 20px;
+}
+
+#listaViagens .edit-icon{
+	height: 20px;
+}
