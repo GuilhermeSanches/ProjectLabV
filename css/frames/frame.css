@@ -8,7 +8,7 @@
 			background-color: black;
 			z-index:1004;
 			-moz-opacity: 0.8;
-			opacity:.80;
+			opacity:0.8;
 			filter: alpha(opacity=80);
 		}
 		#white_content, #frame_viagem, #frame_categoria{

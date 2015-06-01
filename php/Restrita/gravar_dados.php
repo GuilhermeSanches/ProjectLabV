@@ -3,7 +3,7 @@
              include "../Conexao/config.php";
             session_start();
             $usuario = $_SESSION['sessao_user'];
-            $tipo = $_POST['combo'];
+            $tipo = $_POST['comboCategoria'];
             $valor=$_POST['Valor'];
             $idviagem=$_POST['comboViagem'];
            
