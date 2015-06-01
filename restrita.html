@@ -41,7 +41,7 @@
                     </li>   
                         <li><div>LANÇAMENTOS</div>
                         <ul>
-                              <li><a href="#" onclick="Index_frame.abrirFrame();Index_get_viagens.inicializar();">Cadastrar</a></li>
+                              <li><a href="#" onclick="Index_frame.abrirFrame();Index_get_viagens.inicializar();Index_get_categorias.inicializar();">Cadastrar</a></li>
                               <li><a href="#">Editar</a></li>
                               <li><a href="#">Excluir</a></li>                              
                           </ul>
@@ -97,14 +97,8 @@ src="imagens/bot_moradia_ativo.jpg" alt=""></a></div>
                 <option value="aguarde...">Aguarde...</option>                                         
                </select>
                <label>Escolha a Categoria</label>
-               <select name="combo" id="combo">
-                   <option selected value="101">Moradia</option>
-                   <option value="102">Alimentação</option>
-                   <option value="103">Transporte</option>
-                   <option value="104">Comunicação</option>
-                   <option value="105">Lazer</option>
-                   <option value="106">Saúde</option>
-                   <option value="107">Diversos</option>                   
+               <select name="comboCategoria" id="comboCategoria">
+                   <option value="aguarde...">Aguarde...</option>            
                </select>
                <label for="">Valor: </label>
                <input type="text" name="Valor">
@@ -185,8 +179,9 @@ src="imagens/bot_moradia_ativo.jpg" alt=""></a></div>
          <script src="js/Highchart/jsGrafico1.js"></script>
          <script src="js/Scroll_Efect/restritajs.js"></script>
          <script src="js/Ajax/Restrita/ajaxGetDados.js"></script>
-         <script type="text/javascript" src="js/Ajax/Restrita/ajaxGetViagens.js"></script>
-         <script type="text/javascript" src="js/Ajax/Restrita/ajaxGetListaViagens.js"></script>         
+         <script src="js/Ajax/Restrita/ajaxGetViagens.js"></script>
+         <script src="js/Ajax/Restrita/ajaxGetCategorias.js"></script>
+         <script src="js/Ajax/Restrita/ajaxGetListaViagens.js"></script>         
          <script src="js/Ajax/Restrita/index_gravar_dados.js"></script>
          <script src="js/Ajax/Restrita/index_gravar_viagem.js"></script>
          <script src="js/Frames/frame.js"></script>

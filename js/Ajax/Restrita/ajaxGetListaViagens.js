@@ -1,7 +1,7 @@
 var ViagensControler = {
     inicializar: function() {
-                                                    //inicializa o JS	
-		ViagensControler.getData();        //Setar Formulário
+                                               
+		ViagensControler.getData();                
 	},
         
 		

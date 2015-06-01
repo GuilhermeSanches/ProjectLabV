@@ -11,8 +11,8 @@ var Resume_getDados = {
         document.getElementById('conteudo_resumo').style.display='inline-block';
         document.getElementById('container').style.display='inline-block'; //esconde container
         document.getElementById('listaViagens').style.display='none';
-                                                   //inicializa o JS	
-		Resume_getDados.getData(categoria);        //Setar Formulário
+                                                  
+		Resume_getDados.getData(categoria);       
 	},
         
 		
@@ -68,7 +68,7 @@ var Resume_getDados = {
 
 
 };
-//inicio
+
 
 
 
