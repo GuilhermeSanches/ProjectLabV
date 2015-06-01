@@ -26,6 +26,8 @@ var ViagensControler = {
         
         document.getElementById('listaViagens').style.display='inline-block';
         
+        //document.getElementById('listaCategoria').style.display='none';
+        
         var corpo = document.getElementById("conteudoTabelaViagens"); //cria um corpo
         
         corpo.innerHTML="";

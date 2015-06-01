@@ -95,19 +95,23 @@
                           <fieldset id="fdset">  <form  id="form3" name="cadastro" method="post" action="">
                                  <p id="pLogin">Cadastre-se e tenha acesso a todos nossos serviços disponíveis!</p>    
                                 <label>Nome</label>  
-                                <input id="nome" name="nome" type="text" class="tf" value="" />
+                                <input id="nome" name="nome" type="text" class="tf" value="" required />
                                 <label>Sobrenome</label>
-                                <input id="sobrenome" name="sobrenome" type="text" class="tf" value="" />
+                                <input id="sobrenome" name="sobrenome" type="text" class="tf" value="" required/>
                                 <label>E-mail</label>
-                                <input id="email2" name="email" type="text" class="tf" value="" />
+                                <input id="email2" name="email" type="text" class="tf" value="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required/>
                                 <label>Usuario</label>
-                                <input id="user" name="usuario" type="text" class="tf" value="" />
+                                <input id="user" name="usuario" type="text" class="tf" value="" required/>
                                 <label>Senha</label>
-                                <input id="pass" name="senha" type="password" class="tf" value="" />
+                                <input id="pass" name="senha" type="password" class="tf" value="" required/>
                                 <label>Repita a senha</label>
-                                <input id="pass2" name="senha_rec" type="password" class="tf" value="" />
+                                <input id="pass2" name="senha_rec" type="password" class="tf" value="" required/>
+                                <label>Idade</label>
+                                <input id="idade" name="idade" type="number" class="tf" value="">
+                                
                                 <label>+ informações sobre você</label>  
                                 <textarea id="info" name="info" class="tf">  </textarea>
+                                
                                 <input id="cadastrar" type="submit" name="Submit" value="Enviar" />
                             </form>                            
                         </fieldset>

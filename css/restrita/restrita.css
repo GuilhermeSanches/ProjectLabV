@@ -226,3 +226,16 @@ div{
 #listaViagens .edit-icon{
 	height: 20px;
 }
+
+#listaCategoria{
+	width: 100%;
+	display: none;
+}
+
+#listaCategoria .remove-icon{
+	height: 20px;
+}
+
+#listaCategoria .edit-icon{
+	height: 20px;
+}

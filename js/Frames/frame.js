@@ -13,3 +13,11 @@ var Index_frameViagem = {
         document.getElementById('black_overlay').style.display='block';
     }    
 };
+
+var Index_frameCategoria = {
+    
+    abrirFrameCategoria: function(){
+        document.getElementById('frame_categoria').style.display='block';
+        document.getElementById('black_overlay').style.display='block';
+    }    
+};

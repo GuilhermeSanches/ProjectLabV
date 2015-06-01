@@ -27,7 +27,3 @@ var Index_get_viagens = {
 }
 
 };
-
-
-
-

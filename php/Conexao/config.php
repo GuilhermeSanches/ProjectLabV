@@ -2,7 +2,14 @@
 
 <?php
 /* Variáveis PDO */
-$base_dados = 'a4826563_server';
+/* Conexão com BD Hostinger
+$base_dados = 'u698654501_bd';
+$usuario_bd = 'u698654501_bd';
+$senha_bd   = 'travel';
+$host_db    = 'mysql.hostinger.com.br';
+$conexao_pdo = null;
+*/
+$base_dados = 'travelmanager';
 $usuario_bd = 'root';
 $senha_bd   = '';
 $host_db    = 'localhost';

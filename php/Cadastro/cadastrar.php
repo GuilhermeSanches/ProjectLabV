@@ -8,6 +8,7 @@
             $usuario = trim($_POST['usuario']);
             $senha = md5($_POST['senha']);
             $senha2 = ($_POST['senha_rec']);
+            $idade = ($_POST['idade']);
             $info = trim($_POST['info']);
 
             /* Vamos checar algum erro nos campos */
@@ -112,7 +113,7 @@
             (nome, sobrenome, login, email, senha, idade, info, data_ultimo_login, ativo)
 
             VALUES
-            ('$nome', '$sobrenome', '$usuario', '$email', '$senha', '21', '$info', now(),'0' )");
+            ('$nome', '$sobrenome', '$usuario', '$email', '$senha', '$idade', '$info', now(),'0' )");
                   
                
                 $sql->execute();  }

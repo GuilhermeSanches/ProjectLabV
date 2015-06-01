@@ -11,6 +11,7 @@ var Resume_getDados = {
         document.getElementById('conteudo_resumo').style.display='inline-block';
         document.getElementById('container').style.display='inline-block'; //esconde container
         document.getElementById('listaViagens').style.display='none';
+        document.getElementById('listaCategoria').style.display='none';
                                                    //inicializa o JS	
 		Resume_getDados.getData(categoria);        //Setar Formulário
 	},

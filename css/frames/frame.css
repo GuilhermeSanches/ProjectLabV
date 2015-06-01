@@ -11,7 +11,7 @@
 			opacity:.80;
 			filter: alpha(opacity=80);
 		}
-		#white_content, #frame_viagem{
+		#white_content, #frame_viagem, #frame_categoria{
 			display: none;
 			position: absolute;
 			top: 25%;
@@ -31,9 +31,7 @@
            display: inline;
            width: 150px;
            margin:40px 30% auto;
-           
-           
-       
+ 
        }
 
         .fechar{
@@ -43,3 +41,11 @@
         }
 
 
+       .form_categoria{
+           
+           position: absolute;
+           display: inline;
+           width: 150px;
+           margin:40px 30% auto;
+ 
+       }
