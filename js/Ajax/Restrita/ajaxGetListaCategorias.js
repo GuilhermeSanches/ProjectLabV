@@ -37,7 +37,7 @@ var CategoriasControler = {
             var row = document.createElement("tr");
                         
             var cellDescricao = document.createElement("td");
-            var cellDescricao = document.createTextNode(categorias[i].descricao);
+            var cellTextDescricao = document.createTextNode(categorias[i].descricao);
             cellDescricao.appendChild(cellTextDescricao);
             row.appendChild(cellDescricao);
                     
@@ -46,7 +46,7 @@ var CategoriasControler = {
             row.appendChild(cellEditar);
         
             var cellExcluir = document.createElement("td");
-            //cellExcluir.innerHTML="<a href='#' onclick=categoriasControler.remove("+categorias[i].id_viagem+")><img src='imagens/remove-icon.png' class='remove-icon'></a>";
+            cellExcluir.innerHTML="<a href='#' onclick=categoriasControler.remove("+categorias[i].id_viagem+")><img src='imagens/remove-icon.png' class='remove-icon'></a>";
             row.appendChild(cellExcluir);            
             corpo.appendChild(row);
             

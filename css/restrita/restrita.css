@@ -181,12 +181,10 @@ article{
     border-bottom: 2px solid #EDEEEE;
 }
 
-div{
-    
-}
 
 #container form{
     top: 300px;
+	width: 80%;
     
 }
 
