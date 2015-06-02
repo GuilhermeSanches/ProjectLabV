@@ -25,11 +25,11 @@ var Index_cadastrar = {
 
     form = Form.mergeFormItens(form);      
         
-	$.ajax({			                    //Função AJAX
-			url:"php/Cadastro/cadastrar.php",			//Arquivo php
-			type:"POST",			      	//Método de envio
-			data:form,                      //Dados
-   			success: function (sucess){		//Sucesso no AJAX
+	$.ajax({			                      //Função AJAX
+			url:"php/Cadastro/cadastrar.php", //Arquivo php
+			type:"POST",			      	  //Método de envio
+			data:form,                        //Dados
+   			success: function (sucess){		  //Sucesso no AJAX
                 		if(sucess==1){						
                 			alert('Cadastro feito com sucesso. Verifique sua caixa de entrada e confirme seu cadastro');
                             window.location.href='index.html';

@@ -9,7 +9,7 @@ $senha_bd   = 'travel';
 $host_db    = 'mysql.hostinger.com.br';
 $conexao_pdo = null;
 */
-$base_dados = 'travelmanager';
+$base_dados = 'a4826563_server';
 $usuario_bd = 'root';
 $senha_bd   = '';
 $host_db    = 'localhost';
