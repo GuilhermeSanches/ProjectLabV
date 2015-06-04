@@ -152,9 +152,9 @@
             áreas exclusivas, por favor clique no link abaixo ou copie e cole na barra de
             endereço do seu navegador.<br /> <br />
 
-            <a href='http://www.guisanches.com.br/ativar.php?id={$usuario_id}&code={$senha}'>
+            <a href='http://www.guisanches.com.br/php/Cadastro/ativar.php?id={$usuario_id}&code={$senha}'>
 
-            http://www.guisanches.com.br/ativar.php?id={$usuario_id}&code={$senha}
+            http://www.guisanches.com.br/php/Cadastro/ativar.php?id={$usuario_id}&code={$senha}
 
             </a>
 

@@ -12,29 +12,33 @@
             $valorP = $_POST['valorP'];
             $valorL = $_POST['valorL'];
             $observacao = $_POST['observacao'];
-           
-            /* Vamos checar algum erro nos campos */
+    
+            $dataPartidafinal = implode("-",array_reverse(explode("/",$dataPartida)));
+            $dataRetornofinal = implode("-",array_reverse(explode("/",$dataRetorno)));
 
-                                  
-                try{
+            //verificar se nao existe viagem nesta mesma data 
+            $sql_verifica_viagem = $conexao_pdo->prepare(
+            "select b.id from bd_viagens b where (b.data_partida between '{$dataPartidafinal}' and '{$dataRetornofinal}') or( b.data_retorno between '{$dataPartidafinal}' and '{$dataRetornofinal}')"            
+            );
+            $sql_verifica_viagem->execute();
+
+            $num = $sql_verifica_viagem->rowCount();
+
+            if($num > 0){
+                echo 2;
+                die();
+            }
+            
             $sql = $conexao_pdo->prepare(
 
             "INSERT INTO bd_viagens
             (id_usuario, local, cidade, pais, data_partida, data_retorno, valor_previsto, valor_limite, observacao)
 
             VALUES
-            ('$id', '$local', '$cidade', '$pais', '$dataPartida','$dataRetorno', '$valorP','$valorL', '$observacao')");
+            ('$id', '$local', '$cidade', '$pais', '$dataPartidafinal','$dataRetornofinal', '$valorP','$valorL', '$observacao')");
                   
                
-                $sql->execute();  }
-                catch(PDOException $e){
-                echo 'Error: ' . $e->getMessage();
-                }
-                
-                    echo(1);
-                    
-                    
-
-            
-
+                $sql->execute();     
+                   echo 1;
+                                                                                                                     
             ?>

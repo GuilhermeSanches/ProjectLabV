@@ -36,10 +36,10 @@ var Index_gravar_viagem = {
                             document.form_viagem.reset(); //resetar campos do formulário
                             document.reload;
                             
-                		}else if(sucess==3)
-                            alert("Você já tem uma viagem cadastrada");
+                		}else if(sucess==2)
+                            alert("Você já tem uma viagem cadastrada neste intervalo de datas");
                         else{
-                            alert("Falha ao gravar, repita operação!");
+                            alert("Falha ao gravar, repita operação!teste");
                         }
             		}
 		});
