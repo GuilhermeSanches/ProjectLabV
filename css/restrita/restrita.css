@@ -31,21 +31,24 @@
 
 .nav_right{    
     z-index: 1001;
-    position: absolute;       
+    position: absolute;         
     right: 0px;
     top: 0px;    
 }
-.nav_right a{
-    text-decoration: none;
+.nav_right ul li a{    
     
+    
+    
+    margin-top: -3px;    
 }
+
 
 body{
     background-color: #fff;
 
 }
 #nav:before{
-        
+        cursor: pointer;
         content: "";
         background: url(../../imagens/icone4.fw.png);        
         margin-top: 40px;
@@ -130,17 +133,31 @@ body{
 	display:block
 }
 
-.nav_right ul li{
-        background-color: white;
-        border-radius: 8px;
-        padding: 6px;
-        margin-top: -10px;
-        color: #097FAD;        
+.nav_right ul li a{
+      color: #097FAD;
+        margin-bottom: -4px;
+    
 
 }
 .nav_right ~ul li:hover{
-        opacity: 0.8;
-        padding: 7px;
+     
+}
+
+
+.nav_right ul li{
+    margin-top: -8px;
+    padding: 5px;
+    border-radius: 10px;
+    background: white;        
+}
+.nav_right ul li:hover{
+    opacity: 0.5;
+    color: #097FAD;
+     margin-top: -8px;
+    padding: 5px;
+    border-radius: 10px;
+    background: white;      
+    
 }
 
 
@@ -158,6 +175,58 @@ article{
         background-image: url(../../imagens/resumo_titulo.jpg);
         width: 130px;
         height: 38px;
+
+}
+#relatorio{
+        margin-top: 20%;        
+        background-image: url(../../imagens/relatorios.png);
+        width: 260px;
+        height: 249px;
+        
+}
+#relatorio select{
+        
+   border-radius: 4px;
+    background:  #097FAD;
+   margin-left: 300px;
+    border: 0px;
+    color: white;
+    opacity: 0.8;
+    padding: 7px;
+    
+}  
+
+#relatorio p{
+   margin-top: -30px;        
+   margin-left: 300px;
+    width: 400px;
+    font-size: 28px;
+    opacity: 0.6;
+}
+
+#relatorio input{
+    margin-top: 20px;
+    margin-left: 300px;
+
+}
+
+#container{
+    width: 900px;
+
+}
+#relatorio [type=submit]{
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 0px;
+    background: #ADB78C;
+    cursor: pointer;        
+}
+
+#container p{
+    font-size: 24px;
+    opacity: 0.6;
+    margin-top: 5px;
 
 }
 
@@ -236,4 +305,11 @@ article{
 
 #listaCategoria .edit-icon{
 	height: 20px;
+}
+
+#form_viagem .input{
+        
+        border-radius: 10px;
+
+
 }

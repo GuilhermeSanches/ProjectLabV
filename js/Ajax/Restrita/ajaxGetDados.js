@@ -64,7 +64,7 @@ var Resume_getDados = {
         
        
         
-        
+        if(obj2)
        Resume_highchart.inicializar(obj2);
         }                 
 

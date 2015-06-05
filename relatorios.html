@@ -17,13 +17,16 @@
         <!-- Libraries -->
         
         
+        
          <script src="js/Libraries/jquery-1-9.js"></script> 
          <script src="js/Libraries/highchart.js"></script>
+         <script src="http://code.highcharts.com/highcharts-3d.js"></script>
          <script src="js/Libraries/highchart_model.js"></script>
+
         
         
         
-       <title>Travel Manager</title> 
+       <title>Travel Manager Relatórios</title> 
 </head>
 <body>
        <div id="black_overlay"></div>
@@ -34,6 +37,7 @@
                <nav id="nav" class="nav_left">
                 <ul>
                        <li onclick="location.href='restrita.html'">INICIO</li>
+                       
                         <li><div> VIAGENS</div> 
                           <ul>
                               <li><a href="#" onclick="Index_frameViagem.abrirFrameViagens();">Cadastrar</a></li>
@@ -54,19 +58,19 @@ onclick="Index_frameCategoria.abrirFrameCategoria();">Cadastrar</a></li>
                               <li><a href="#" onclick="CategoriasControler.inicializar();">Listar</a></li>                             
                           </ul>
                     </li>  
-                        <li onclick="location.href='relatorios.html'">RELATÓRIOS</li>                                            
+                        <li>RELATÓRIOS</li>                                            
                 </ul>
-        
+         
               
              <!-- Menu Right -->  
                
-                    <nav class="nav_right">
+                <nav class="nav_right">
                 <ul>
                         <li><a href="#">Configuracões de conta</a></li>
                         <li><a href="php/Logout/logout.php">Sair</a></li>
                 </ul>
             </nav>
-             </nav>
+            </nav>
             
             <!-- Fim do Cabeçalho -->         
             
@@ -163,13 +167,30 @@ src="imagens/bot_moradia_ativo.jpg" alt=""></a></div>
     
     <div id="conteudo_total">      
        <div id="conteudo_resumo">       
-        <div id="resumo">  
-                     
+        <div id="relatorio">  
+                   
+                   <form action="" method="post" name="form_relatorios">
+                    <p>Escolha o Relatório desejado e clique em gerar</p>
+                     <select name="comboRel" id="comboRelatorio">
+                         <option value="1">Média de gastos diários por viagens</option>
+                         <option value="2">Média de gastos anuais com viagens</option>                              
+                         <option value="3">Total de gastos anuais por categorias</option> 
+                     </select>
+                     <input type="submit" value="Gerar" name="gerar" id="gerar">
+                     </form>
         </div>
       </div>
     </div>
       
-    <div  id="container" ></div> 
+    <div  id="container" >
+        <p>Relatórios</p>
+   
+</div>
+
+
+
+        
+    </div> 
 
         <!--Frame Listar Viagens  -->
         
@@ -215,10 +236,11 @@ src="imagens/bot_moradia_ativo.jpg" alt=""></a></div>
 
     
         <!-- Scripts -->      
-        
+         <script src="js/Ajax/Restrita/TravelControllerIndex.js"></script>
          <script src="js/Scroll_Efect/restritajs.js"></script>
          <script src="js/Ajax/Restrita/ajaxGetDados.js"></script>
          <script src="js/Highchart/jsGrafico1.js"></script>
+         <script src="js/Highchart/jsGraficoRel2.js"></script>
          <script src="js/Ajax/Restrita/ControllerListTravels.js"></script>
          <script src="js/Ajax/Restrita/ControllerTravel.js"></script>
          <script src="js/Ajax/Restrita/ServiceTravel.js"></script>

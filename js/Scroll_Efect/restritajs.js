@@ -11,6 +11,10 @@ $(document).ready(function () {
  
   
 $("#nav").css('position', 'fixed');
+    $("#nav").css('z-index', '1001');
+            $("#nav").css('position', 'fixed');
+            $("#nav").css('left', '0');            
+            $("#menu_lateral").css('position', 'fixed');
     $(document).scroll(function () {
         scrollTop = $(this).scrollTop();
             $("#nav").css('z-index', '1001');

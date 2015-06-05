@@ -23,10 +23,12 @@ var Index_get_categorias = {
         document.form_gravar.comboCategoria.options.length = obj.length;
         for (var i=0; i<obj.length; i++) 
         {document.form_gravar.comboCategoria.options[i] = new Option(obj[i].descricao, obj[i].id_categoria);}
-
+        
+                 
 }
 
 };
+
 
 
 

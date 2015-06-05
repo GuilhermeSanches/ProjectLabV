@@ -6,7 +6,9 @@
             $tipo = $_POST['comboCategoria'];
             $valor=$_POST['Valor'];
             $idviagem=$_POST['comboViagem'];
+            $data=$_POST['data_lanc'];
            
+            $dataFinal = implode("-",array_reverse(explode("/",$data)));
             /* Vamos checar algum erro nos campos */
 
             if ((!$tipo) || (!$valor)){
@@ -38,7 +40,7 @@
             (idviagem, iddespesa, valor, data_lancamento)
 
             VALUES
-            ('$idviagem', '$tipo', '$valor', now())");
+            ('$idviagem', '$tipo', '$valor', '$dataFinal')");
                   
                
                 $sql->execute();  }
