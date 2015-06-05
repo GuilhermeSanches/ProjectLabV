@@ -1,5 +1,7 @@
 var Sessao_checked = {
+    
     init: function(){
+        
            $.post('php/Restrita/functions.php', 
            {nome:null},
            Sessao_checked.validateReturn

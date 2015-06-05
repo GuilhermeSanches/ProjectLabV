@@ -7,8 +7,8 @@
 var Resume_highchart = {
 
 	inicializar: function(obj2) {
-        if(obj2!='undefined')
-		Resume_highchart.criarHighchart(obj2);        //Setar Formulário
+                
+		Resume_highchart.criarHighchart(obj2); 
 	},
                                       
     getDadosFinais: function(obj2){
@@ -68,8 +68,8 @@ var Resume_highchart = {
     }
                  
 };
-//inicio
-window.onload = Resume_highchart.inicializar;
+
+
 
 
 

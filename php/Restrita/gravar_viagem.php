@@ -18,7 +18,7 @@
 
             //verificar se nao existe viagem nesta mesma data 
             $sql_verifica_viagem = $conexao_pdo->prepare(
-            "select b.id from bd_viagens b where (b.data_partida between '{$dataPartidafinal}' and '{$dataRetornofinal}') or( b.data_retorno between '{$dataPartidafinal}' and '{$dataRetornofinal}')"            
+            "select b.id from bd_viagens b where ((b.data_partida between '{$dataPartidafinal}' and '{$dataRetornofinal}') or( b.data_retorno between '{$dataPartidafinal}' and '{$dataRetornofinal}')) and b.id_usuario = '{$id}'"            
             );
             $sql_verifica_viagem->execute();
 
