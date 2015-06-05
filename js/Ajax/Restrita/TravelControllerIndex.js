@@ -1,6 +1,11 @@
 var ControllerTravelIndex = {
         
-        GetTravel: function(valueE){               
+        GetTravel: function(valueE){     
+            
+        document.getElementById('conteudo_resumo').style.display='inline-block';
+        document.getElementById('container').style.display='inline-block'; //esconde container
+        document.getElementById('listaViagens').style.display='none';
+        document.getElementById('listaCategoria').style.display='none';        
    
        if(valueE==2){             
         $.post('php/Relatorios/rel_2.php', 
@@ -49,6 +54,7 @@ var ControllerTravelIndex = {
                     
                     
                     Rel2.inicializar_highchart(obj2);
+                     
                 }
         
         }
@@ -58,8 +64,8 @@ var ControllerTravelIndex = {
 
 
 //inicializar o js
-document.form_relatorios.addEventListener('submit', function(event) {
-	ControllerTravelIndex.GetTravel(
+document.form_relatorios.addEventListener('submit', function(event) {    
+	ControllerTravelIndex.GetTravel(    
         document.form_relatorios.comboRel.options[document.form_relatorios.comboRel.selectedIndex].value);		
 			
 			//to avoid page refresh/reload

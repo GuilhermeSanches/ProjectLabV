@@ -20,7 +20,7 @@ var CategoriasControler = {
         var categorias = new Array();
         categorias = JSON.parse(dados);        
 
-        document.getElementById('conteudo_resumo').style.display='none'; //esconde conteudo resumo
+       
         
         document.getElementById('container').style.display='none'; //esconde container
         

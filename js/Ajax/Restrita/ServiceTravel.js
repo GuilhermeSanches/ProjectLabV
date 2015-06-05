@@ -4,14 +4,25 @@ var ServiceTravel = {
     //popular combobox de viagens no frame de lançar despesas
     populateComboTravel: function(obj){
               
+        
         document.form_gravar.comboViagem.options.length = obj.length;
         for (var i=0; i<obj.length; i++) 
         document.form_gravar.comboViagem.options[i] = new Option(obj[i].local, obj[i].id_viagem);
 },
     
+     populateComboTravelRestrita: function(obj){
+    if(obj[0].local===''){
+        document.form_restrita_viagens.comboViagens.options[0] = new Option("Você ainda nao tem viagem cadastrada", 1);
+    }     else{     
+        document.form_restrita_viagens.comboViagens.options.length = obj.length;
+        for (var i=0; i<obj.length; i++) 
+        document.form_restrita_viagens.comboViagens.options[i] = new Option(obj[i].local, obj[i].id_viagem);
+    }
+},
+    
     //preparar os containers do HTML
     prepareViewTravel: function(viagens){
-          document.getElementById('conteudo_resumo').style.display='none'; //esconde conteudo resumo        
+                
           document.getElementById('container').style.display='none'; //esconde container        
           document.getElementById('listaViagens').style.display='inline-block';        
           document.getElementById('listaCategoria').style.display='none';

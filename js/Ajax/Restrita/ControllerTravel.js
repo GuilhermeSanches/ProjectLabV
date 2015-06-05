@@ -18,8 +18,10 @@ var ControllerTravel = {
     
      getDados: function(dados){
          var obj = new Array();
-         obj = JSON.parse(dados);  
+         obj = JSON.parse(dados); 
+         ServiceTravel.populateComboTravelRestrita(obj);
          ServiceTravel.populateComboTravel(obj);
+         
         
     }
     
@@ -27,3 +29,6 @@ var ControllerTravel = {
    
 
 };
+
+
+window.onload = ControllerTravel.inicializar;

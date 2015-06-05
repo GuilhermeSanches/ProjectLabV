@@ -3,6 +3,7 @@
 var Rel2 = {
 
 inicializar_highchart: function(obj2){
+    
             if(obj2!='undefined')
 		      Rel2.init(obj2);  
 },    

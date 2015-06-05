@@ -21,3 +21,10 @@ var Index_frameCategoria = {
         document.getElementById('black_overlay').style.display='block';
     }    
 };
+
+
+document.form_restrita_viagens.cadViagem.addEventListener('click', function(event) {
+	Index_frameViagem.abrirFrameViagens();			
+			//to avoid page refresh/reload
+			event.preventDefault();
+		}); 

@@ -35,13 +35,7 @@
               
                <nav id="nav" class="nav_left">
                 <ul>
-                       <li onclick="location.href='restrita.html'">INICIO</li>
-                        <li><div> VIAGENS</div> 
-                          <ul>
-                              <li><a href="#" onclick="Index_frameViagem.abrirFrameViagens();">Cadastrar</a></li>
-                              <li><a href="#" onclick="ViagensControler.inicializar();">Listar</a></li>                            
-                          </ul>
-                    </li>   
+                       <li onclick="location.href='restrita.html'">INICIO</li>                         
                         <li><div>LANÇAMENTOS</div>
                         <ul>
                               <li><a href="#" onclick="Index_frame.abrirFrame();ControllerTravel.inicializar();Index_get_categorias.inicializar();">Cadastrar</a></li>
@@ -164,7 +158,18 @@ src="imagens/bot_moradia_ativo.jpg" alt=""></a></div>
     <div id="conteudo_pagina">              
     
     <div id="conteudo_total">      
-       <div id="conteudo_resumo">       
+       <div id="conteudo_resumo">   
+        <div id="restrita">  
+                   
+                   <form action="" method="post" name="form_restrita_viagens" id="form_init">
+                    <p>Escolha sua viagem para visualizar mais detalhes ou cadastre uma nova viagem</p>
+                     <select name="comboViagens" id="comboViagens">                         
+                     </select>
+                     <input type="submit" value="Detalhes" name="gerar" id="gerar">
+                    <input type="submit" value="Cadastrar" name="cadViagem" id="cadastrarViagem">
+                    <input type="submit" value="Listar Todas" name="listarRes" id="listarResumo">
+                     </form>
+        </div>    
         <div id="resumo">  
                      
         </div>

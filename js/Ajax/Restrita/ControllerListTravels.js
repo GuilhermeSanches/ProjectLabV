@@ -26,5 +26,14 @@ var ViagensControler = {
 };
 
 
+document.form_restrita_viagens.listarRes.addEventListener('click', function(event) {
+	ViagensControler.inicializar();				
+			//to avoid page refresh/reload
+			event.preventDefault();
+		}); 
+
+
+
+
 
 

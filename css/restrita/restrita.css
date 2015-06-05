@@ -184,10 +184,23 @@ article{
         height: 249px;
         
 }
-#relatorio select{
+#restrita{
+        margin-top: 20%;        
+        background-image: url(../../imagens/travel.png);
+        width: 280px;
+        height: 258px;
         
-   border-radius: 4px;
-    background:  #097FAD;
+}
+
+#form_init input{
+    display: inline;
+    border: 2px solid;
+
+}
+#relatorio select, #restrita select{
+        
+   border-radius: 4px;    
+    background:  #097FAD;    
    margin-left: 300px;
     border: 0px;
     color: white;
@@ -196,7 +209,9 @@ article{
     
 }  
 
-#relatorio p{
+
+
+#relatorio p, #restrita p{
    margin-top: -30px;        
    margin-left: 300px;
     width: 400px;
@@ -204,7 +219,7 @@ article{
     opacity: 0.6;
 }
 
-#relatorio input{
+#relatorio input, #restrita input{
     margin-top: 20px;
     margin-left: 300px;
 
@@ -214,13 +229,29 @@ article{
     width: 900px;
 
 }
-#relatorio [type=submit]{
+#relatorio [type=submit], #restrita [type=submit]{
+    margin-top: 80px;
+    display: block;
     padding: 10px;
     font-size: 16px;
     border-radius: 5px;
     border: 0px;
-    background: #ADB78C;
-    cursor: pointer;        
+    background: #3F8D55;
+    cursor: pointer;      
+    
+}
+
+#restrita [type=submit][id=cadastrarViagem]{
+    margin-left: 420px;
+    margin-top: -41px;
+    background:  #5A7FBD;    
+
+}
+#restrita [type=submit][id=listarResumo]{
+    margin-left: 550px;
+    margin-top: -41px;
+    background:  #DC8131;    
+
 }
 
 #container p{
