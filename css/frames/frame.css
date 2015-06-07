@@ -11,7 +11,7 @@
 			opacity:0.8;
 			filter: alpha(opacity=80);
 		}
-		#white_content, #frame_viagem, #frame_categoria, #frame_alterar_categoria{
+		#white_content, #frame_viagem, #frame_categoria, #frame_alterar_categoria, #frame_alterar_viagem{
 			display: none;
 			position: absolute;
 			top: 25%;
@@ -42,6 +42,15 @@
 
 
        .form_categoria{
+           
+           position: absolute;
+           display: inline;
+           width: 150px;
+           margin:40px 30% auto;
+ 
+       }
+        
+        .form_alterar_viagem{
            
            position: absolute;
            display: inline;

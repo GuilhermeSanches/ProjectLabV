@@ -33,7 +33,7 @@ var Service_html = {
             row.appendChild(cellTotal);
             
             var cellEditar = document.createElement("td");
-            cellEditar.innerHTML="<a href='#'><img src='imagens/edit-icon.png' class='edit-icon'></a>";
+            cellEditar.innerHTML="<a href='#' onclick=ServiceTravel.showViagem("+viagens[i].id_viagem+")><img src='imagens/edit-icon.png' class='edit-icon'></a>";
             row.appendChild(cellEditar);
         
             var cellExcluir = document.createElement("td");

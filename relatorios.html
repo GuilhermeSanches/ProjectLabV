@@ -160,7 +160,37 @@ src="imagens/bot_moradia_ativo.jpg" alt=""></a></div>
                <input type="submit" name="gravar_categoria" id="gravar_categoria" value="Gravar">           
        </form>
    </div>      
-
+   
+         <!-- Frame Alterar Viagens  -->  
+             
+        <div id="frame_alterar_viagem" class="frame">
+           <div class="fechar">
+              <a href = "javascript:void(0)" onclick = "document.getElementById('frame_alterar_viagem').style.display='none';document.getElementById('black_overlay').style.display='none'">Fechar[X]</a>
+        </div>
+           <form action="" id="form_alterar_viagem" name="form_alterar_viagem" class="form_alterar_viagem" method="post">
+               <label>Editar Viagens</label>
+               
+               <label for="">Local: </label>
+               <input type="text" name="local" id="alterar_local"required>
+               <label for="">Cidade: </label>
+               <input type="text" name="cidade" id="alterar_cidade">
+               <label for="">País: </label>
+               <input type="text" name="pais" id="alterar_pais">                              
+               <label for="">Data Partida: </label>
+               <input type="date" name="dateCheckin" id="alterar_data_partida" pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="dd/mm/aaaa" required>
+               <label for="">Data Retorno: </label>
+               <input type="date" name="dateCheckout" id="alterar_data_retorno" pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="dd/mm/aaaa" required>
+               <label for="">Valor Previsto: </label>
+               <input type="text" name="valorP" id="alterar_valorP" pattern="^\\$?(([1-9](\\d*|\\d{0,2}(,\\d{3})*))|0)(\\.\\d{1,2})?$" placeholder="0000,00" required>
+               <label for="">Valor Limite: </label>
+               <input type="text" name="valorL" id="alterar_valorL" pattern="^\\$?(([1-9](\\d*|\\d{0,2}(,\\d{3})*))|0)(\\.\\d{1,2})?$" placeholder="0000,00" required>
+               <label for="">Observação: </label>
+               <textarea name="observacao" id="alterar_observacao"></textarea>
+               <input type="hidden" name="id_viagem" id="alterar_id_viagem" value="">
+               <input type="submit" name="gravar_viagem" id="gravar_viagem" value="Gravar">           
+       </form>
+   </div> 
+   
    <!-- Frame Alterar Categoria -->
     
     <div id="frame_alterar_categoria" class="frame">

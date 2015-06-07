@@ -44,8 +44,8 @@ var CategoriasControler = {
                         
             var cellEditar = document.createElement("td");
             
-            if(categorias[i].id_usuario==0){
-                cellEditar.innerHTML="";          
+            if((categorias[i].id_usuario==0) || (categorias[i].id_usuario==null)){
+                cellEditar.innerHTML="<img src='imagens/disable-edit-icon.png' class='edit-icon' />";          
             }else{
                 cellEditar.innerHTML="<a href='#' onclick=CategoriasControler.showCategoria("+categorias[i].id_categoria+")><img src='imagens/edit-icon.png' class='edit-icon'></a>";
             }
@@ -53,8 +53,8 @@ var CategoriasControler = {
         
             var cellExcluir = document.createElement("td");
             
-            if(categorias[i].id_usuario==0){
-                cellExcluir.innerHTML="";
+            if((categorias[i].id_usuario==0) || (categorias[i].id_usuario==null)){
+                cellExcluir.innerHTML="<img src='imagens/disable-remove-icon.png' class='remove-icon' />";
             }else{
                 cellExcluir.innerHTML="<a href='#' onclick=CategoriasControler.remove("+categorias[i].id_categoria+")><img src='imagens/remove-icon.png' class='remove-icon'></a>";
             }
@@ -92,7 +92,8 @@ var CategoriasControler = {
 		});
         return false;
     },
-        
+    
+    //ação do submit do formulário alterar categoria
     setForm_alterar_categoria: function() {
 		var form_categoria = document.form_alterar_categoria;		
 		form_categoria.onsubmit = function() {
