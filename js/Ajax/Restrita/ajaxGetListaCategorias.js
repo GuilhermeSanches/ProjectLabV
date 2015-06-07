@@ -2,6 +2,7 @@ var CategoriasControler = {
     inicializar: function() {
                                                     //inicializa o JS	
 		CategoriasControler.getData();        //Setar Formulário
+        CategoriasControler.setForm_alterar_categoria();
 	},
         
 		
@@ -40,30 +41,92 @@ var CategoriasControler = {
             var cellTextDescricao = document.createTextNode(categorias[i].descricao);
             cellDescricao.appendChild(cellTextDescricao);
             row.appendChild(cellDescricao);
-                    
+                        
             var cellEditar = document.createElement("td");
-            cellEditar.innerHTML="<a href='#'><img src='imagens/edit-icon.png' class='edit-icon'></a>";
+            
+            if(categorias[i].id_usuario==0){
+                cellEditar.innerHTML="";          
+            }else{
+                cellEditar.innerHTML="<a href='#' onclick=CategoriasControler.showCategoria("+categorias[i].id_categoria+")><img src='imagens/edit-icon.png' class='edit-icon'></a>";
+            }
             row.appendChild(cellEditar);
         
             var cellExcluir = document.createElement("td");
-            cellExcluir.innerHTML="<a href='#' onclick=categoriasControler.remove("+categorias[i].id_viagem+")><img src='imagens/remove-icon.png' class='remove-icon'></a>";
+            
+            if(categorias[i].id_usuario==0){
+                cellExcluir.innerHTML="";
+            }else{
+                cellExcluir.innerHTML="<a href='#' onclick=CategoriasControler.remove("+categorias[i].id_categoria+")><img src='imagens/remove-icon.png' class='remove-icon'></a>";
+            }
             row.appendChild(cellExcluir);            
             corpo.appendChild(row);
             
         }
     },
     
-    //remove categoria da tabela
-    remove: function(idviagem) {
+    //remover categoria da tabela
+    remove: function(idcategoria) {
                 
         if(confirm("Deseja realmente remover esta categoria?")){
             
             $.post('php/Restrita/remover_categoria.php', 
-               {id_viagem:idviagem},alert("Categoria excluida com sucesso")
+               {id_categoria:idcategoria},alert("Categoria excluida com sucesso")
             );
             CategoriasControler.getData();			
         }
         return false;
+	},
+    
+    //Exibe categoria da tabela que será alterada
+    showCategoria: function(idcategoria) {
+        $.ajax({			//Função AJAX
+            url:"php/Restrita/getCategoriaById.php",			//Arquivo php
+            type:"POST",				//Método de envio
+            data: {id_categoria:idcategoria},	//Dados
+            dataType: 'json',
+            success: function (categoria){			//Sucesso no AJAX
+                document.getElementById("alterar_descricao").value = categoria[0].descricao;
+                document.getElementById("alterar_id_categoria").value = categoria[0].id_categoria;
+                Index_frameAlterarCategoria.abrirFrameAlterarCategoria();
+            }
+		});
+        return false;
+    },
+        
+    setForm_alterar_categoria: function() {
+		var form_categoria = document.form_alterar_categoria;		
+		form_categoria.onsubmit = function() {
+            return CategoriasControler.atualizar(this);
+                    
+		};
+	},
+	
+  
+    //atualizar categoria da tabela
+    atualizar: function(form_categoria) {
+       form_categoria = Form.mergeFormItens(form_categoria);      
+	   $.ajax({			//Função AJAX
+			url:"php/Restrita/alterar_categoria.php",			//Arquivo php
+			type:"POST",				//Método de envio
+			data: form_categoria,	//Dados
+   			success: function (sucess){			//Sucesso no AJAX
+                		if(sucess==1){						
+                			alert("Categoria Alterada com Sucesso");
+                            document.getElementById('frame_alterar_categoria').style.display='none';
+                            document.getElementById('black_overlay').style.display='none';
+                            document.form_alterar_categoria.reset(); //resetar campos do formulário
+                            
+                            CategoriasControler.getData(); //atualiza lista de categorias
+                            
+                		}else if(sucess==3)
+                            alert("Você já tem uma categoria cadastrada");
+                        else{
+                            alert("Falha ao alterar categoria, repita operação!");
+                        }
+            		}
+		});
+		
+		return false;
 	}
     
 };

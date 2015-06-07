@@ -28,8 +28,3 @@ var Index_get_categorias = {
 }
 
 };
-
-
-
-
-

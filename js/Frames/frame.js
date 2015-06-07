@@ -22,9 +22,17 @@ var Index_frameCategoria = {
     }    
 };
 
+var Index_frameAlterarCategoria = {
+
+    abrirFrameAlterarCategoria: function(){
+        document.getElementById('frame_alterar_categoria').style.display='block';
+        document.getElementById('black_overlay').style.display='block';
+    }
+};
+
 
 document.form_restrita_viagens.cadViagem.addEventListener('click', function(event) {
 	Index_frameViagem.abrirFrameViagens();			
 			//to avoid page refresh/reload
 			event.preventDefault();
-		}); 
+}); 
