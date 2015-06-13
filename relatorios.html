@@ -1,308 +1,248 @@
 <!DOCTYPE html>
 <html>
-<head>
-       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-       
-        <!-- Favicon Icon -->
-        
-       <link rel="shortcut icon" href="imagens/favicon2.png"/>
-       
-       <!-- Styles -->
-       
-       <link href="css/restrita/restrita.css" rel="stylesheet" />
-       <link rel="stylesheet" href="css/frames/frame.css"/>
-       <link rel="stylesheet" href="css/restrita/table.css">
-       
-                    
-        <!-- Libraries -->
-        
-        
-        
-         <script src="js/Libraries/jquery-1-9.js"></script> 
-         <script src="js/Libraries/highchart.js"></script>
-         <script src="http://code.highcharts.com/highcharts-3d.js"></script>
-         <script src="js/Libraries/highchart_model.js"></script>
-
-        
-        
-        
-       <title>Travel Manager Relatórios</title> 
-</head>
-<body>
-       <div id="black_overlay"></div>
-        <header>
-              
-            <!-- Menu Left DropDown -->  
-              
-               <nav id="nav" class="nav_left">
-                <ul>
-                       <li onclick="location.href='restrita.html'">INICIO</li>
-                       
-                        <li><div> VIAGENS</div> 
-                          <ul>
-                              <li><a href="#" onclick="Index_frameViagem.abrirFrameViagens();">Cadastrar</a></li>
-                              <li><a href="#" onclick="ViagensControler.inicializar();">Listar</a></li>                            
-                          </ul>
-                    </li>   
-                        <li><div>LANÇAMENTOS</div>
-                        <ul>
-                              <li><a href="#" onclick="Index_frame.abrirFrame();ControllerTravel.inicializar();Index_get_categorias.inicializar();">Cadastrar</a></li>
-                              <li><a href="#">Editar</a></li>
-                              <li><a href="#">Excluir</a></li>                              
-                          </ul>
-                        </li> 
-                        <li><div>CATEGORIAS</div>
-                         <ul>
-                              <li><a href="#"
-onclick="Index_frameCategoria.abrirFrameCategoria();">Cadastrar</a></li>
-                              <li><a href="#" onclick="CategoriasControler.inicializar();">Listar</a></li>                             
-                          </ul>
-                    </li>  
-                         <li onclick="location.href='relatorios.html'">RELATÓRIOS</li>                                      
-                </ul>
-         
-              
-             <!-- Menu Right -->  
-               
-                <nav class="nav_right">
-                <ul>
-                        <li><a href="#">Configuracões de conta</a></li>
-                        <li><a href="php/Logout/logout.php">Sair</a></li>
-                </ul>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+      <!-- Favicon Icon -->
+      <link rel="shortcut icon" href="imagens/favicon2.png"/>
+      <!-- Styles -->
+      <link href="css/restrita/restrita.css" rel="stylesheet" />
+      <link rel="stylesheet" href="css/frames/frame.css"/>
+      <link rel="stylesheet" href="css/restrita/table.css">
+      <!-- Libraries -->
+      <script src="js/Libraries/jquery-1-9.js"></script> 
+      <script src="js/Libraries/highchart.js"></script>
+      <script src="http://code.highcharts.com/highcharts-3d.js"></script>
+      <script src="js/Libraries/highchart_model.js"></script>
+      <title>Travel Manager Relatórios</title>
+   </head>
+   <body>
+      <div id="black_overlay"></div>
+      <header>
+         <!-- Menu Left DropDown -->  
+         <nav id="nav" class="nav_left">
+            <ul>
+               <li onclick="location.href='restrita.html'">INICIO</li>
+               <li>
+                  <div> VIAGENS</div>
+                  <ul>
+                     <li><a href="#" onclick="Index_frameViagem.abrirFrameViagens();">Cadastrar</a></li>
+                     <li><a href="#" onclick="ViagensControler.inicializar();">Listar</a></li>
+                  </ul>
+               </li>
+               <li>
+                  <div>LANÇAMENTOS</div>
+                  <ul>
+                     <li><a href="#" onclick="Index_frame.abrirFrame();ControllerTravel.inicializar();Index_get_categorias.inicializar();">Cadastrar</a></li>
+                     <li><a href="#">Editar</a></li>
+                     <li><a href="#">Excluir</a></li>
+                  </ul>
+               </li>
+               <li>
+                  <div>CATEGORIAS</div>
+                  <ul>
+                     <li><a href="#"
+                        onclick="Index_frameCategoria.abrirFrameCategoria();">Cadastrar</a></li>
+                     <li><a href="#" onclick="CategoriasControler.inicializar();">Listar</a></li>
+                  </ul>
+               </li>
+               <li onclick="location.href='relatorios.html'">RELATÓRIOS</li>
+            </ul>
+            <!-- Menu Right -->  
+            <nav class="nav_right">
+               <ul>
+                  <li><a href="#">Configuracões de conta</a></li>
+                  <li><a href="php/Logout/logout.php">Sair</a></li>
+               </ul>
             </nav>
-            </nav>
-            
-            <!-- Fim do Cabeçalho -->         
-            
-        </header>
-        
-        <!-- Menu Lateral  -->  
-        
-    <div id="menu_lateral">
-               <div class="menu_lat"><a href="#" onclick="Resume_getDados.inicializar(101);"><img 
-src="imagens/bot_moradia_ativo.jpg" alt=""></a></div>
-               <div class="menu_lat"><a href="#" onclick="Resume_getDados.inicializar(102);"><img src="imagens/bot_alimentacao_ativo.jpg" alt=""></a></div>
-               <div class="menu_lat"><a href="#" onclick="Resume_getDados.inicializar(103);"><img src="imagens/bot_transporte_ativo.jpg" alt=""></a></div>
-               <div class="menu_lat"><a href="#" onclick="Resume_getDados.inicializar(104);"><img src="imagens/bot_comunicacao_ativo.jpg" alt=""></a></div>
-               <div class="menu_lat"><a href="#" onclick="Resume_getDados.inicializar(105);"><img src="imagens/bot_lazer_ativo.jpg" alt=""></a></div>          
-               <div class="menu_lat"><a href="#" onclick="Resume_getDados.inicializar(106);"><img src="imagens/bot_saude_ativo.jpg" alt=""></a></div>          
-               <div class="menu_lat"><a href="#" onclick="Resume_getDados.inicializar(107);"><img src="imagens/bot_diversos_ativo.jpg" alt=""></a></div>                    
-                
-    </div>
-      
-      <!-- Frame Despesas  -->  
-      
-       <div id="white_content" class="frame">
-             <div class="fechar">
-                <a href = "javascript:void(0)" onclick ="document.getElementById('white_content').style.display='none';document.getElementById('black_overlay').style.display='none'">Fechar[X]
-                </a>
-             </div>
-            <form action="" class="form_viagem" name="form_gravar" method="post">
-              <label for="">Escolha a viagem</label>
-                <select name="comboViagem" id="comboViagem">  
-                <option value="aguarde...">Aguarde...</option>                                         
-               </select>
-               <label>Escolha a Categoria</label>
-               <select name="comboCategoria" id="comboCategoria">
-                   <option value="aguarde...">Aguarde...</option>            
-               </select>
-               <label for="">Valor: </label>
-               <input type="text" name="Valor" pattern="^\\$?(([1-9](\\d*|\\d{0,2}(,\\d{3})*))|0)(\\.\\d{1,2})?$" placeholder="0000,00" required>
-               <label for="">Data: </label>
-               <input type="date" name="data_lanc" value="" pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="dd/mm/aaaa" required>
-               <input type="submit" name="gravar" id="gravar" value="Gravar">
-           
-       </form>
-       </div>   
-       
-             <!-- Frame Viagens  -->  
-             
-        <div id="frame_viagem" class="frame">
-           <div class="fechar">
-              <a href = "javascript:void(0)" onclick = "document.getElementById('frame_viagem').style.display='none';document.getElementById('black_overlay').style.display='none'">Fechar[X]</a>
-        </div>
-           <form action="" id="form_viagem" name="form_viagem" class="form_viagem" method="post">
-               <label>Cadastro de Viagens</label>
-               
-               <label for="">Local: </label>
-               <input type="text" name="local" required>
-               <label for="">Cidade: </label>
-               <input type="text" name="cidade">
-               <label for="">País: </label>
-               <input type="text" name="pais">                              
-               <label for="">Data Partida: </label>
-               <input type="date" name="dateCheckin" pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="dd/mm/aaaa" required>
-               <label for="">Data Retorno: </label>
-               <input type="date" name="dateCheckout" pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="dd/mm/aaaa" required>
-               <label for="">Valor Previsto: </label>
-               <input type="text" name="valorP"  pattern="^\\$?(([1-9](\\d*|\\d{0,2}(,\\d{3})*))|0)(\\.\\d{1,2})?$" placeholder="0000,00" required>
-               <label for="">Valor Limite: </label>
-               <input type="text" name="valorL"  pattern="^\\$?(([1-9](\\d*|\\d{0,2}(,\\d{3})*))|0)(\\.\\d{1,2})?$" placeholder="0000,00" required>
-               <label for="">Observação: </label>
-               <textarea name="observacao"></textarea>
-               <input type="submit" name="gravar_viagem" id="gravar_viagem" value="Gravar">           
-       </form>
-   </div>       
-    
-    <!-- Frame Categoria -->
-    
-    <div id="frame_categoria" class="frame">
-        <div class="fechar">
-              <a href = "javascript:void(0)" onclick = "document.getElementById('frame_categoria').style.display='none';document.getElementById('black_overlay').style.display='none'">Fechar[X]</a>
-        </div>
-          
-           <form action="" id="form_categoria" name="form_categoria" class="form_categoria" method="post">
-               <label>Cadastro de Categorias</label>
-               
-               <label for="">Descrição: </label>
-               <input type="text" name="descricao" required>
-               
-               <input type="submit" name="gravar_categoria" id="gravar_categoria" value="Gravar">           
-       </form>
-   </div>      
-   
-         <!-- Frame Alterar Viagens  -->  
-             
-        <div id="frame_alterar_viagem" class="frame">
-           <div class="fechar">
-              <a href = "javascript:void(0)" onclick = "document.getElementById('frame_alterar_viagem').style.display='none';document.getElementById('black_overlay').style.display='none'">Fechar[X]</a>
-        </div>
-           <form action="" id="form_alterar_viagem" name="form_alterar_viagem" class="form_alterar_viagem" method="post">
-               <label>Editar Viagens</label>
-               
-               <label for="">Local: </label>
-               <input type="text" name="local" id="alterar_local"required>
-               <label for="">Cidade: </label>
-               <input type="text" name="cidade" id="alterar_cidade">
-               <label for="">País: </label>
-               <input type="text" name="pais" id="alterar_pais">                              
-               <label for="">Data Partida: </label>
-               <input type="date" name="dateCheckin" id="alterar_data_partida" pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="dd/mm/aaaa" required>
-               <label for="">Data Retorno: </label>
-               <input type="date" name="dateCheckout" id="alterar_data_retorno" pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="dd/mm/aaaa" required>
-               <label for="">Valor Previsto: </label>
-               <input type="text" name="valorP" id="alterar_valorP" pattern="^\\$?(([1-9](\\d*|\\d{0,2}(,\\d{3})*))|0)(\\.\\d{1,2})?$" placeholder="0000,00" required>
-               <label for="">Valor Limite: </label>
-               <input type="text" name="valorL" id="alterar_valorL" pattern="^\\$?(([1-9](\\d*|\\d{0,2}(,\\d{3})*))|0)(\\.\\d{1,2})?$" placeholder="0000,00" required>
-               <label for="">Observação: </label>
-               <textarea name="observacao" id="alterar_observacao"></textarea>
-               <input type="hidden" name="id_viagem" id="alterar_id_viagem" value="">
-               <input type="submit" name="gravar_viagem" id="gravar_viagem" value="Gravar">           
-       </form>
-   </div> 
-   
-   <!-- Frame Alterar Categoria -->
-    
-    <div id="frame_alterar_categoria" class="frame">
-        <div class="fechar">
-              <a href = "javascript:void(0)" onclick = "document.getElementById('frame_alterar_categoria').style.display='none';document.getElementById('black_overlay').style.display='none'">Fechar[X]</a>
-        </div>
-          
-           <form id="form_alterar_categoria" name="form_alterar_categoria" class="form_alterar_categoria" method="post">
-               <label>Editar Categoria</label>
-               
-               <label for="">Descrição: </label>
-               <input type="text" name="descricao" id="alterar_descricao" required>
-               <input type="hidden" name="id_categoria" id="alterar_id_categoria" value="">
-               <input type="submit" name="gravar_categoria" id="gravar_categoria" value="Alterar">           
-       </form>
-   </div>         
-   
-   
-    <article>
-    
-    <div id="conteudo_pagina">              
-    
-    <div id="conteudo_total">      
-       <div id="conteudo_resumo">       
-        <div id="relatorio">  
-                   
-                   <form action="" method="post" name="form_relatorios">
-                    <p>Escolha o Relatório desejado e clique em gerar</p>
-                     <select name="comboRel" id="comboRelatorio">
-                         <option value="1">Média de gastos diários por viagens</option>
-                         <option value="2">Média de gastos anuais com viagens</option>                              
-                         <option value="3">Total de gastos anuais por categorias</option> 
-                     </select>
-                     <input type="submit" value="Gerar" name="gerar" id="gerar">
-                     </form>
-        </div>
+         </nav>
+         <!-- Fim do Cabeçalho -->         
+      </header>
+      <!-- Menu Lateral  -->  
+      <div id="menu_lateral">
+         <div class="menu_lat"><a href="#" onclick="Resume_getDados.inicializar(101);"><img 
+            src="imagens/bot_moradia_ativo.jpg" alt=""></a></div>
+         <div class="menu_lat"><a href="#" onclick="Resume_getDados.inicializar(102);"><img src="imagens/bot_alimentacao_ativo.jpg" alt=""></a></div>
+         <div class="menu_lat"><a href="#" onclick="Resume_getDados.inicializar(103);"><img src="imagens/bot_transporte_ativo.jpg" alt=""></a></div>
+         <div class="menu_lat"><a href="#" onclick="Resume_getDados.inicializar(104);"><img src="imagens/bot_comunicacao_ativo.jpg" alt=""></a></div>
+         <div class="menu_lat"><a href="#" onclick="Resume_getDados.inicializar(105);"><img src="imagens/bot_lazer_ativo.jpg" alt=""></a></div>
+         <div class="menu_lat"><a href="#" onclick="Resume_getDados.inicializar(106);"><img src="imagens/bot_saude_ativo.jpg" alt=""></a></div>
+         <div class="menu_lat"><a href="#" onclick="Resume_getDados.inicializar(107);"><img src="imagens/bot_diversos_ativo.jpg" alt=""></a></div>
       </div>
-    </div>
-      
-    <div  id="container" >
-        <p>Relatórios</p>
-   
-</div>
-
-
-
-        
-    </div> 
-
-        <!--Frame Listar Viagens  -->
-        
-        <div id="listaViagens">
-           <div class="table">
-               <span class="title">Viagens Realizadas</span>
-            <table id=tabelaViagens>
-                    <thead>
-                        <tr>
-                            <th>Local</th>
-                            <th>Data Partida</th>
-                            <th>Data Retorno</th>
-                            <th>Total Gasto</th>
-                            <th>Editar</th>
-                            <th>Excluir</th>
-                        </tr>
-                    </thead>
-                    <tbody id="conteudoTabelaViagens"></tbody>
-            </table>
+      <!-- Frame Despesas  -->  
+      <div id="white_content" class="frame">
+         <div class="fechar">
+            <a href = "javascript:void(0)" onclick ="document.getElementById('white_content').style.display='none';document.getElementById('black_overlay').style.display='none'">Fechar[X]
+            </a>
+         </div>
+         <form action="" class="form_viagem" name="form_gravar" method="post">
+            <label for="">Escolha a viagem</label>
+            <select name="comboViagem" id="comboViagem">
+               <option value="aguarde...">Aguarde...</option>
+            </select>
+            <label>Escolha a Categoria</label>
+            <select name="comboCategoria" id="comboCategoria">
+               <option value="aguarde...">Aguarde...</option>
+            </select>
+            <label for="">Valor: </label>
+            <input type="text" name="Valor" pattern="^\\$?(([1-9](\\d*|\\d{0,2}(,\\d{3})*))|0)(\\.\\d{1,2})?$" placeholder="0000,00" required>
+            <label for="">Data: </label>
+            <input type="date" name="data_lanc" value="" pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="dd/mm/aaaa" required>
+            <input type="submit" name="gravar" id="gravar" value="Gravar">
+         </form>
+      </div>
+      <!-- Frame Viagens  -->  
+      <div id="frame_viagem" class="frame">
+         <div class="fechar">
+            <a href = "javascript:void(0)" onclick = "document.getElementById('frame_viagem').style.display='none';document.getElementById('black_overlay').style.display='none'">Fechar[X]</a>
+         </div>
+         <form action="" id="form_viagem" name="form_viagem" class="form_viagem" method="post">
+            <label>Cadastro de Viagens</label>
+            <label for="">Local: </label>
+            <input type="text" name="local" required>
+            <label for="">Cidade: </label>
+            <input type="text" name="cidade">
+            <label for="">País: </label>
+            <input type="text" name="pais">                              
+            <label for="">Data Partida: </label>
+            <input type="date" name="dateCheckin" pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="dd/mm/aaaa" required>
+            <label for="">Data Retorno: </label>
+            <input type="date" name="dateCheckout" pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="dd/mm/aaaa" required>
+            <label for="">Valor Previsto: </label>
+            <input type="text" name="valorP"  pattern="^\\$?(([1-9](\\d*|\\d{0,2}(,\\d{3})*))|0)(\\.\\d{1,2})?$" placeholder="0000,00" required>
+            <label for="">Valor Limite: </label>
+            <input type="text" name="valorL"  pattern="^\\$?(([1-9](\\d*|\\d{0,2}(,\\d{3})*))|0)(\\.\\d{1,2})?$" placeholder="0000,00" required>
+            <label for="">Observação: </label>
+            <textarea name="observacao"></textarea>
+            <input type="submit" name="gravar_viagem" id="gravar_viagem" value="Gravar">           
+         </form>
+      </div>
+      <!-- Frame Categoria -->
+      <div id="frame_categoria" class="frame">
+         <div class="fechar">
+            <a href = "javascript:void(0)" onclick = "document.getElementById('frame_categoria').style.display='none';document.getElementById('black_overlay').style.display='none'">Fechar[X]</a>
+         </div>
+         <form action="" id="form_categoria" name="form_categoria" class="form_categoria" method="post">
+            <label>Cadastro de Categorias</label>
+            <label for="">Descrição: </label>
+            <input type="text" name="descricao" required>
+            <input type="submit" name="gravar_categoria" id="gravar_categoria" value="Gravar">           
+         </form>
+      </div>
+      <!-- Frame Alterar Viagens  -->  
+      <div id="frame_alterar_viagem" class="frame">
+         <div class="fechar">
+            <a href = "javascript:void(0)" onclick = "document.getElementById('frame_alterar_viagem').style.display='none';document.getElementById('black_overlay').style.display='none'">Fechar[X]</a>
+         </div>
+         <form action="" id="form_alterar_viagem" name="form_alterar_viagem" class="form_alterar_viagem" method="post">
+            <label>Editar Viagens</label>
+            <label for="">Local: </label>
+            <input type="text" name="local" id="alterar_local"required>
+            <label for="">Cidade: </label>
+            <input type="text" name="cidade" id="alterar_cidade">
+            <label for="">País: </label>
+            <input type="text" name="pais" id="alterar_pais">                              
+            <label for="">Data Partida: </label>
+            <input type="date" name="dateCheckin" id="alterar_data_partida" pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="dd/mm/aaaa" required>
+            <label for="">Data Retorno: </label>
+            <input type="date" name="dateCheckout" id="alterar_data_retorno" pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="dd/mm/aaaa" required>
+            <label for="">Valor Previsto: </label>
+            <input type="text" name="valorP" id="alterar_valorP" pattern="^\\$?(([1-9](\\d*|\\d{0,2}(,\\d{3})*))|0)(\\.\\d{1,2})?$" placeholder="0000,00" required>
+            <label for="">Valor Limite: </label>
+            <input type="text" name="valorL" id="alterar_valorL" pattern="^\\$?(([1-9](\\d*|\\d{0,2}(,\\d{3})*))|0)(\\.\\d{1,2})?$" placeholder="0000,00" required>
+            <label for="">Observação: </label>
+            <textarea name="observacao" id="alterar_observacao"></textarea>
+            <input type="hidden" name="id_viagem" id="alterar_id_viagem" value="">
+            <input type="submit" name="gravar_viagem" id="gravar_viagem" value="Gravar">           
+         </form>
+      </div>
+      <!-- Frame Alterar Categoria -->
+      <div id="frame_alterar_categoria" class="frame">
+         <div class="fechar">
+            <a href = "javascript:void(0)" onclick = "document.getElementById('frame_alterar_categoria').style.display='none';document.getElementById('black_overlay').style.display='none'">Fechar[X]</a>
+         </div>
+         <form id="form_alterar_categoria" name="form_alterar_categoria" class="form_alterar_categoria" method="post">
+            <label>Editar Categoria</label>
+            <label for="">Descrição: </label>
+            <input type="text" name="descricao" id="alterar_descricao" required>
+            <input type="hidden" name="id_categoria" id="alterar_id_categoria" value="">
+            <input type="submit" name="gravar_categoria" id="gravar_categoria" value="Alterar">           
+         </form>
+      </div>
+      <article>
+         <div id="conteudo_pagina">
+            <div id="conteudo_total">
+               <div id="conteudo_resumo">
+                  <div id="relatorio">
+                     <form action="" method="post" name="form_relatorios">
+                        <p>Escolha o Relatório desejado e clique em gerar</p>
+                        <select name="comboRel" id="comboRelatorio">
+                           <option value="1">Média de gastos diários por viagens</option>
+                           <option value="2">Média de gastos anuais com viagens</option>
+                           <option value="3">Total de gastos anuais por categorias</option>
+                        </select>
+                        <input type="submit" value="Gerar" name="gerar" id="gerar">
+                     </form>
+                  </div>
+               </div>
             </div>
-    </div>
-       
-    <!--Frame Listar Categorias  -->
-        
-    <div id="listaCategoria">
-        <div class="table">
-           <span class="title">Categorias Criadas</span>
-            <table id=tabelaCategoria>
-                    <thead>
-                        <tr>
-                            <th>Descrição</th>
-                            <th>Editar</th>
-                            <th>Excluir</th>
-                        </tr>
-                    </thead>
-                    <tbody id="conteudoTabelaCategoria"></tbody>
-            </table>
-        </div>
-    </div>
-        
-   </div>
-    </article>            
-
-    
-        <!-- Scripts -->      
-         <script src="js/Ajax/Restrita/TravelControllerIndex.js"></script>
-         <script src="js/Scroll_Efect/restritajs.js"></script>
-         <script src="js/Ajax/Restrita/ajaxGetDados.js"></script>
-         <script src="js/Highchart/jsGrafico1.js"></script>
-         <script src="js/Highchart/jsGraficoRel2.js"></script>
-         <script src="js/Ajax/Restrita/ControllerListTravels.js"></script>
-         <script src="js/Ajax/Restrita/ControllerTravel.js"></script>
-         <script src="js/Ajax/Restrita/ServiceTravel.js"></script>
-         <script src="js/Ajax/Restrita/ajaxGetCategorias.js"></script>
-         <script src="js/Ajax/Restrita/ajaxGetListaCategorias.js"></script>
-         <script src="js/Ajax/Restrita/ServiceHtml.js"></script>         
-         <script src="js/Ajax/Restrita/index_gravar_dados.js"></script>
-         <script src="js/Ajax/Restrita/index_gravar_viagem.js"></script>
-         <script src="js/Ajax/Restrita/index_gravar_categoria.js"></script>
-         <script src="js/Frames/frame.js"></script>
-         <script src="js/Form/Form.js"></script>
-        <script src="js/Security/verifica_sessao.js"></script> 
-
-         
-         
-        </body>
-    </html>
+            <div  id="container" >
+               <p>Relatórios</p>
+            </div>
+         </div>
+         <!--Frame Listar Viagens  -->
+         <div id="listaViagens">
+            <div class="table">
+               <span class="title">Viagens Realizadas</span>
+               <table id=tabelaViagens>
+                  <thead>
+                     <tr>
+                        <th>Local</th>
+                        <th>Data Partida</th>
+                        <th>Data Retorno</th>
+                        <th>Total Gasto</th>
+                        <th>Editar</th>
+                        <th>Excluir</th>
+                     </tr>
+                  </thead>
+                  <tbody id="conteudoTabelaViagens"></tbody>
+               </table>
+            </div>
+         </div>
+         <!--Frame Listar Categorias  -->
+         <div id="listaCategoria">
+            <div class="table">
+               <span class="title">Categorias Criadas</span>
+               <table id=tabelaCategoria>
+                  <thead>
+                     <tr>
+                        <th>Descrição</th>
+                        <th>Editar</th>
+                        <th>Excluir</th>
+                     </tr>
+                  </thead>
+                  <tbody id="conteudoTabelaCategoria"></tbody>
+               </table>
+            </div>
+         </div>
+         </div>
+      </article>
+      <!-- Scripts -->      
+      <script src="js/Ajax/Restrita/TravelControllerIndex.js"></script>
+      <script src="js/Scroll_Efect/restritajs.js"></script>
+      <script src="js/Ajax/Restrita/ajaxGetDados.js"></script>
+      <script src="js/Highchart/jsGrafico1.js"></script>
+      <script src="js/Highchart/jsGraficoRel2.js"></script>
+      <script src="js/Ajax/Restrita/ControllerListTravels.js"></script>
+      <script src="js/Ajax/Restrita/ControllerTravel.js"></script>
+      <script src="js/Ajax/Restrita/ServiceTravel.js"></script>
+      <script src="js/Ajax/Restrita/ajaxGetCategorias.js"></script>
+      <script src="js/Ajax/Restrita/ajaxGetListaCategorias.js"></script>
+      <script src="js/Ajax/Restrita/ServiceHtml.js"></script>         
+      <script src="js/Ajax/Restrita/index_gravar_dados.js"></script>
+      <script src="js/Ajax/Restrita/index_gravar_viagem.js"></script>
+      <script src="js/Ajax/Restrita/index_gravar_categoria.js"></script>
+      <script src="js/Frames/frame.js"></script>
+      <script src="js/Form/Form.js"></script>
+      <script src="js/Security/verifica_sessao.js"></script> 
+   </body>
+</html>
