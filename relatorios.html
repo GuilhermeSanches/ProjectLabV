@@ -1,68 +1,5 @@
 <!DOCTYPE html>
 <html>
-<<<<<<< HEAD
-<head>
-       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-       
-        <!-- Favicon Icon -->
-        
-       <link rel="shortcut icon" href="imagens/favicon2.png"/>
-       
-       <!-- Styles -->
-       
-       <link href="css/restrita/restrita.css" rel="stylesheet" />
-       <link rel="stylesheet" href="css/restrita/relatorio.css">
-       <link rel="stylesheet" href="css/frames/frame.css"/>
-       <link rel="stylesheet" href="css/restrita/table.css">
-       
-                    
-        <!-- Libraries -->
-        
-        
-        
-         <script src="js/Libraries/jquery-1-9.js"></script> 
-         <script src="js/Libraries/highchart.js"></script>
-         <script src="http://code.highcharts.com/highcharts-3d.js"></script>
-         <script src="js/Libraries/highchart_model.js"></script>
-
-        
-        
-        
-       <title>Travel Manager Relatórios</title> 
-</head>
-<body>
-       <div id="black_overlay"></div>
-        <header>
-              
-            <!-- Menu Left DropDown -->  
-              
-               <nav id="nav" class="nav_left">
-                <ul>
-                       <li onclick="location.href='restrita.html'">INICIO</li>
-                       
-                        <li><div> VIAGENS</div> 
-                          <ul>
-                              <li><a href="#" onclick="Index_frameViagem.abrirFrameViagens();">Cadastrar</a></li>
-                              <li><a href="#" onclick="ViagensControler.inicializar();">Listar</a></li>                            
-                          </ul>
-                    </li>   
-                        <li><div>LANÇAMENTOS</div>
-                        <ul>
-                              <li><a href="#" onclick="Index_frame.abrirFrame();ControllerTravel.inicializar();Index_get_categorias.inicializar();">Cadastrar</a></li>
-                              <li><a href="#">Editar</a></li>
-                              <li><a href="#">Excluir</a></li>                              
-                          </ul>
-                        </li> 
-                        <li><div>CATEGORIAS</div>
-                         <ul>
-                              <li><a href="#"
-onclick="Index_frameCategoria.abrirFrameCategoria();">Cadastrar</a></li>
-                              <li><a href="#" onclick="CategoriasControler.inicializar();">Listar</a></li>                             
-                          </ul>
-                    </li>  
-                         <li onclick="location.href='relatorios.html'">RELATÓRIOS</li>                                      
-                </ul>
-=======
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
       
@@ -113,9 +50,7 @@ onclick="Index_frameCategoria.abrirFrameCategoria();">Cadastrar</a></li>
                   </ul>
                </li>
                <li onclick="location.href='relatorios.html'">RELATÓRIOS</li>
-            </ul>
->>>>>>> 1f688e07f1196f143c3dc2d81eb5a77e7474feed
-         
+            </ul>        
             <!-- Menu Right -->  
             <nav class="nav_right">
                <ul>
@@ -285,65 +220,7 @@ onclick="Index_frameCategoria.abrirFrameCategoria();">Cadastrar</a></li>
                   </thead>
                   <tbody id="conteudoTabelaViagens"></tbody>
                </table>
-            </div>
-<<<<<<< HEAD
-    </div>
-      
-        <form action="" method="post" name="form_restrita_viagens" id="form_v" >
-                    <p>Escolha sua viagem para visualizar mais detalhes ou cadastre uma nova viagem</p>
-                     <select name="comboViagens" id="comboViagens">                         
-                     </select>
-                     <input type="submit" value="Detalhes" name="gerar" id="gerar">
-                    <input type="submit" value="Cadastrar" name="cadViagem" id="cadastrarViagem">
-                    <input type="submit" value="Listar Todas" name="listarRes" id="listarResumo">
-                     </form>
-      
-       
-    <!--Frame Listar Categorias  -->
-        
-    <div id="listaCategoria">
-        <div class="table">
-           <span class="title">Categorias Criadas</span>
-            <table id=tabelaCategoria>
-                    <thead>
-                        <tr>
-                            <th>Descrição</th>
-                            <th>Editar</th>
-                            <th>Excluir</th>
-                        </tr>
-                    </thead>
-                    <tbody id="conteudoTabelaCategoria"></tbody>
-            </table>
-        </div>
-    </div>
-        
-   </div>
-    </article>            
-
-    
-        <!-- Scripts -->      
-         <script src="js/Ajax/Restrita/TravelControllerIndex.js"></script>
-         <script src="js/Scroll_Efect/restritajs.js"></script>
-         <script src="js/Ajax/Restrita/ajaxGetDados.js"></script>
-         <script src="js/Highchart/jsGrafico1.js"></script>
-         <script src="js/Highchart/jsGraficoRel2.js"></script>
-         <script src="js/Ajax/Restrita/ControllerListTravels.js"></script>
-         <script src="js/Ajax/Restrita/ControllerTravel.js"></script>
-         <script src="js/Ajax/Restrita/ServiceTravel.js"></script>
-         <script src="js/Ajax/Restrita/ajaxGetCategorias.js"></script>
-         <script src="js/Ajax/Restrita/ajaxGetListaCategorias.js"></script>
-         <script src="js/Ajax/Restrita/ServiceHtml.js"></script>         
-         <script src="js/Ajax/Restrita/index_gravar_dados.js"></script>
-         <script src="js/Ajax/Restrita/index_gravar_viagem.js"></script>
-         <script src="js/Ajax/Restrita/index_gravar_categoria.js"></script>
-         <script src="js/Frames/frame.js"></script>
-         <script src="js/Form/Form.js"></script>
-        <script src="js/Security/verifica_sessao.js"></script> 
-
-=======
-         </div>
->>>>>>> 1f688e07f1196f143c3dc2d81eb5a77e7474feed
-         
+            </div>             
          <!--Frame Listar Detalhes das Viagens  -->
          <div id="detalhesViagens">
             <div class="table">

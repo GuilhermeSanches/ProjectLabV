@@ -44,12 +44,7 @@
             (idviagem, iddespesa, valor, data_lancamento, descricao)
 
             VALUES
-<<<<<<< HEAD
-            ('$idviagem', '$tipo', '{$valor}', '$dataFinal')");
-=======
-            ('$idviagem', '$tipo', '$valor', '$dataFinal','$descricao')");
->>>>>>> 1f688e07f1196f143c3dc2d81eb5a77e7474feed
-                  
+            ('$idviagem', '$tipo', '$valor', '$dataFinal','$descricao')");            
                
                 $sql->execute();  }
                 catch(PDOException $e){
