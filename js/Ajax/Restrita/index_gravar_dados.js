@@ -37,10 +37,8 @@ var Index_gravar = {
                             document.form_gravar.reset();
                             
                 		}else if(sucess==3)
-                            alert("Você ainda nao tem nenhuma viagem cadastrada");
-                        else if(sucess==4){
-                            alert("A data do lançamento deve estar entre a data de partida e retorno");
-                        }else
+                            alert("Você ainda nao tem nenhuma viagem cadastrada");                        
+                        else
                             alert(sucess);
             		}
 		});
