@@ -127,6 +127,8 @@ var ServiceTravel = {
                 document.getElementById("detValorLimite").innerHTML = viagem[0].valor_limite;
                 document.getElementById("detObservacao").innerHTML = viagem[0].observacao;
                 
+                DespesasControler.getDespesaByViagem(viagem[0].id_viagem);
+                
                 document.getElementById('container').style.display='none'; //esconde container        
                 document.getElementById('listaViagens').style.display='none';        
                 document.getElementById('listaCategoria').style.display='none';

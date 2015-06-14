@@ -290,6 +290,14 @@ article
 	display: none;
 	width: 100%;
 }
+#detalhesViagens .remove-icon
+{
+	height: 20px;
+}
+#detalhesViagens .edit-icon
+{
+	height: 20px;
+}
 #listaCategoria
 {
 	display: none;

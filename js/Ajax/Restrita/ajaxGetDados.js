@@ -12,6 +12,7 @@ var Resume_getDados = {
         document.getElementById('container').style.display='inline-block'; //esconde container
         document.getElementById('listaViagens').style.display='none';
         document.getElementById('listaCategoria').style.display='none';
+        document.getElementById('detalhesViagens').style.display='none';
                                 
 		Resume_getDados.getData(categoria);       
 
