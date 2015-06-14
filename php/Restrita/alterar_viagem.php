@@ -7,14 +7,13 @@
     $local = $_POST['local'];
     $cidade = $_POST['cidade'];
     $pais = $_POST['pais'];
-    $dataPartida = $_POST['dateCheckin'];
-    $dataRetorno = $_POST['dateCheckout'];
+    $dataPartida=date_format(new DateTime(str_replace("/","-",$_POST['dateCheckin'])), 'Y-m-d');
+    $dataRetorno=date_format(new DateTime(str_replace("/","-",$_POST['dateCheckout'])), 'Y-m-d');
     $valorPrevisto = $_POST['valorP'];
     $valorLimite = $_POST['valorL'];
     $observacao = $_POST['observacao'];
-               
+           
     /* Vamos checar algum erro nos campos */
-                                  
     try{
         
         $sql = $conexao_pdo->prepare(
