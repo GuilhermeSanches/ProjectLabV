@@ -1,121 +1,120 @@
-.table {
-	margin:0px;padding:0px;
-	width:100%;
+.table
+{
+	border: 1px solid #ffffff;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
 	box-shadow: 10px 10px 5px #888888;
-	border:1px solid #ffffff;
-	
-	-moz-border-radius-bottomleft:0px;
-	-webkit-border-bottom-left-radius:0px;
-	border-bottom-left-radius:0px;
-	
-	-moz-border-radius-bottomright:0px;
-	-webkit-border-bottom-right-radius:0px;
-	border-bottom-right-radius:0px;
-	
-	-moz-border-radius-topright:0px;
-	-webkit-border-top-right-radius:0px;
-	border-top-right-radius:0px;
-	
-	-moz-border-radius-topleft:0px;
-	-webkit-border-top-left-radius:0px;
-	border-top-left-radius:0px;
+	margin: 0px;
+	moz-border-radius-bottomleft: 0px;
+	moz-border-radius-bottomright: 0px;
+	moz-border-radius-topleft: 0px;
+	moz-border-radius-topright: 0px;
+	padding: 0px;
+	webkit-border-bottom-left-radius: 0px;
+	webkit-border-bottom-right-radius: 0px;
+	webkit-border-top-left-radius: 0px;
+	webkit-border-top-right-radius: 0px;
+	width: 100%;
 }
-
-.table table{
-    border-collapse: collapse;
-    border-spacing: 0;
-	width:100%;
-	height:100%;
-	margin:20px 0px 0px 0px;
-	padding:0px;
+.table table
+{
+	border-collapse: collapse;
+	border-spacing: 0;
+	height: 100%;
+	margin: 20px 0px 0px 0px;
+	padding: 0px;
+	width: 100%;
 }
-
-.table .title{
-	font-size: 40px;
+.table .title
+{
 	color: #005fbf;
+	font-size: 40px;
 }
-.table tr:last-child td:last-child {
-	-moz-border-radius-bottomright:0px;
-	-webkit-border-bottom-right-radius:0px;
-	border-bottom-right-radius:0px;
+.table tr:last-child td:last-child
+{
+	border-bottom-right-radius: 0px;
+	moz-border-radius-bottomright: 0px;
+	webkit-border-bottom-right-radius: 0px;
 }
-
-.table table tr:first-child td:first-child {
-	-moz-border-radius-topleft:0px;
-	-webkit-border-top-left-radius:0px;
-	border-top-left-radius:0px;
+.table table tr:first-child td:first-child
+{
+	border-top-left-radius: 0px;
+	moz-border-radius-topleft: 0px;
+	webkit-border-top-left-radius: 0px;
 }
-
-.table table tr:first-child td:last-child {
-	-moz-border-radius-topright:0px;
-	-webkit-border-top-right-radius:0px;
-	border-top-right-radius:0px;
+.table table tr:first-child td:last-child
+{
+	border-top-right-radius: 0px;
+	moz-border-radius-topright: 0px;
+	webkit-border-top-right-radius: 0px;
 }
-
-.table tr:last-child td:first-child{
-	-moz-border-radius-bottomleft:0px;
-	-webkit-border-bottom-left-radius:0px;
-	border-bottom-left-radius:0px;
+.table tr:last-child td:first-child
+{
+	border-bottom-left-radius: 0px;
+	moz-border-radius-bottomleft: 0px;
+	webkit-border-bottom-left-radius: 0px;
 }
-
-
-.table td, th{
-	vertical-align:middle;
-		background:-o-linear-gradient(bottom, #ffffff 5%, #ffffff 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #ffffff) ); 
-	background:-moz-linear-gradient( center top, #ffffff 5%, #ffffff 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#ffffff");	background: -o-linear-gradient(top,#ffffff,ffffff);
-
-	background-color:#ffffff;
-
-	border:1px solid #ffffff;
-	border-width:0px 1px 1px 0px;
-	text-align:left;
-	padding:7px;
-	font-size:12px;
-	font-family:Arial;
-	font-weight:normal;
-	color:#000000;
+.table td, th
+{
+	background: -moz-linear-gradient( center top, #ffffff 5%, #ffffff 100% );
+	background: -o-linear-gradient(bottom, #ffffff 5%, #ffffff 100%);
+	background: -o-linear-gradient(top,#ffffff,ffffff);
+	background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #ffffff) );
+	background-color: #ffffff;
+	border: 1px solid #ffffff;
+	border-width: 0px 1px 1px 0px;
+	color: #000000;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#ffffff");
+	font-family: Arial;
+	font-size: 12px;
+	font-weight: normal;
+	padding: 7px;
+	text-align: left;
+	vertical-align: middle;
 }
-
-.table tr:last-child td{
-	border-width:0px 1px 0px 0px;
+.table tr:last-child td
+{
+	border-width: 0px 1px 0px 0px;
 }
-
-.table tr td:last-child{
-	border-width:0px 0px 1px 0px;
+.table tr td:last-child
+{
+	border-width: 0px 0px 1px 0px;
 }
-
-.table tr:last-child td:last-child{
-	border-width:0px 0px 0px 0px;
+.table tr:last-child td:last-child
+{
+	border-width: 0px 0px 0px 0px;
 }
-
-.table tr:first-child th{
-	background:-o-linear-gradient(bottom, #005fbf 5%, #003f7f 100%);
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #005fbf), color-stop(1, #003f7f) );
-	background:-moz-linear-gradient( center top, #005fbf 5%, #003f7f 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#005fbf", endColorstr="#003f7f");
+.table tr:first-child th
+{
+	background: -moz-linear-gradient( center top, #005fbf 5%, #003f7f 100% );
+	background: -o-linear-gradient(bottom, #005fbf 5%, #003f7f 100%);
 	background: -o-linear-gradient(top,#005fbf,003f7f);
-	background-color:#005fbf;
-	border:0px solid #ffffff;
-	text-align:center;
-	border-width:0px 0px 1px 1px;
-	font-size:14px;
-	font-family:Arial;
-	font-weight:bold;
-	color:#ffffff;
+	background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #005fbf), color-stop(1, #003f7f) );
+	background-color: #005fbf;
+	border: 0px solid #ffffff;
+	border-width: 0px 0px 1px 1px;
+	color: #ffffff;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#005fbf", endColorstr="#003f7f");
+	font-family: Arial;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
 }
-
-.table tr:first-child:hover th{
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#005fbf", endColorstr="#003f7f");
-	background: -webkit-linear-gradient(#005fbf, 003f7f);
-	background: -o-linear-gradient(#005fbf, 003f7f);
+.table tr:first-child:hover th
+{
 	background: linear-gradient(#005fbf, 003f7f);
-	background-color:#005fbf;
+	background: -o-linear-gradient(#005fbf, 003f7f);
+	background: -webkit-linear-gradient(#005fbf, 003f7f);
+	background-color: #005fbf;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#005fbf", endColorstr="#003f7f");
 }
-
-.table tr:first-child th:first-child{
-	border-width:0px 0px 1px 0px;
+.table tr:first-child th:first-child
+{
+	border-width: 0px 0px 1px 0px;
 }
-.table tr:first-child td:last-child{
-	border-width:0px 0px 1px 1px;
+.table tr:first-child td:last-child
+{
+	border-width: 0px 0px 1px 1px;
 }

@@ -20,9 +20,10 @@ var ServiceTravel = {
     //preparar os containers do HTML
     prepareViewTravel: function(viagens){
                 
-        document.getElementById('container').style.display='none'; //esconde container        
-        document.getElementById('listaViagens').style.display='inline-block';        
+        document.getElementById('container').style.display='none'; //esconde container           
         document.getElementById('listaCategoria').style.display='none';
+        document.getElementById('detalhesViagens').style.display='none';
+        document.getElementById('listaViagens').style.display='inline-block'; 
         
         var corpo = document.getElementById("conteudoTabelaViagens"); //cria um corpo
         
@@ -58,8 +59,8 @@ var ServiceTravel = {
                 document.getElementById("alterar_local").value = viagem[0].local;
                 document.getElementById("alterar_cidade").value = viagem[0].cidade;
                 document.getElementById("alterar_pais").value = viagem[0].pais;
-                document.getElementById("alterar_data_partida").value = viagem[0].data_partida;
-                document.getElementById("alterar_data_retorno").value = viagem[0].data_retorno;
+                document.getElementById("alterar_data_partida").value = DateFormat.format(viagem[0].data_partida);
+                document.getElementById("alterar_data_retorno").value = DateFormat.format(viagem[0].data_retorno);
                 document.getElementById("alterar_valorP").value = viagem[0].valor_previsto;
                 document.getElementById("alterar_valorL").value = viagem[0].valor_limite;
                 document.getElementById("alterar_observacao").value = viagem[0].observacao;
@@ -107,6 +108,32 @@ var ServiceTravel = {
 		  });
 		
 		return false;
-	}
+	},
+    
+    //exibe detalhe da viagem
+    showDetalheViagem: function(idviagem){
+        $.ajax({			//Função AJAX
+            url:"php/Restrita/getViagemById.php",			//Arquivo php
+            type:"POST",				//Método de envio
+            data: {id_viagem:idviagem},	//Dados
+            dataType: 'json',
+            success: function (viagem){			//Sucesso no AJAX
+                document.getElementById("detViagem").innerHTML = viagem[0].local;
+                document.getElementById("detCidade").innerHTML = viagem[0].cidade;
+                document.getElementById("detPais").innerHTML = viagem[0].pais;
+                document.getElementById("detDataPartida").innerHTML = DateFormat.format(viagem[0].data_partida);
+                document.getElementById("detDataRetorno").innerHTML = DateFormat.format(viagem[0].data_retorno);
+                document.getElementById("detValorPrevisto").innerHTML = viagem[0].valor_previsto;
+                document.getElementById("detValorLimite").innerHTML = viagem[0].valor_limite;
+                document.getElementById("detObservacao").innerHTML = viagem[0].observacao;
+                
+                document.getElementById('container').style.display='none'; //esconde container        
+                document.getElementById('listaViagens').style.display='none';        
+                document.getElementById('listaCategoria').style.display='none';
+                document.getElementById('detalhesViagens').style.display='inline-block';
+            }
+		});
+        return false;
+    }
 
 };

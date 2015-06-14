@@ -7,17 +7,23 @@ var Service_html = {
             var row = document.createElement("tr");
                         
             var cellLocal = document.createElement("td");
-            var cellTextLocal = document.createTextNode(viagens[i].local);
-            cellLocal.appendChild(cellTextLocal);
+            
+            var linkLocal = document.createElement("a");
+            linkLocal.setAttribute("href", '#' );
+            linkLocal.setAttribute("onclick", 'ServiceTravel.showDetalheViagem('+viagens[i].id_viagem+')' );
+            linkLocal.innerHTML = viagens[i].local;
+           
+            //var cellTextLocal = document.createTextNode(viagens[i].local);
+            cellLocal.appendChild(linkLocal);
             row.appendChild(cellLocal);
             
             var cellPartida = document.createElement("td");
-            var cellTextPartida = document.createTextNode(viagens[i].partida);
+            var cellTextPartida = document.createTextNode(DateFormat.format(viagens[i].partida));
             cellPartida.appendChild(cellTextPartida);
             row.appendChild(cellPartida);
             
             var cellRetorno = document.createElement("td");
-            var cellTextRetorno = document.createTextNode(viagens[i].retorno);
+            var cellTextRetorno = document.createTextNode(DateFormat.format(viagens[i].retorno));
             cellRetorno.appendChild(cellTextRetorno);
             row.appendChild(cellRetorno);
             

@@ -1,38 +1,30 @@
-#form3 label, #form3 input{
-    display: block;
-    width: 70%;
-    margin-left: 60px;
-    
+#form3 label, #form3 input
+{
+	display: block;
+	margin-left: 60px;
+	width: 70%;
 }
-
-
-
-fieldset{
-    
-    z-index: 1005;        
-    display: block;
-    width: 400px;    
-    background: #097FAD;
-    margin: auto;
-    margin-top:  auto;
-    border-radius: 10px;
-    border: 0px solid #fff;
-    box-shadow: 6px 6px 144px 0px rgba(0,0,0,0.75);
-    color: white;
-    
+fieldset
+{
+	background: #097FAD;
+	border: 0px solid #fff;
+	border-radius: 10px;
+	box-shadow: 6px 6px 144px 0px rgba(0,0,0,0.75);
+	color: white;
+	display: block;
+	margin: auto;
+	margin-top: auto;
+	width: 400px;
+	z-index: 1005;
 }
-
-#bd5p{   
-        padding-bottom: 15px;
-        margin:  auto;
-        width: 80%;        
-
+#bd5p
+{
+	margin: auto;
+	padding-bottom: 15px;
+	width: 80%;
 }
-
-#form3 input[type=submit]{
-    margin-left: 150px;
-    width: 80px;
+#form3 input[type=submit]
+{
+	margin-left: 150px;
+	width: 80px;
 }
-
-
-

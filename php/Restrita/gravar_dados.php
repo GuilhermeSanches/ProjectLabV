@@ -4,9 +4,10 @@
             session_start();
             $usuario = $_SESSION['sessao_user'];
             $tipo = $_POST['comboCategoria'];
-            $valor=$_POST['Valor'];
+            $valor=$_POST['valor'];
             $idviagem=$_POST['comboViagem'];
             $data=$_POST['data_lanc'];
+            $descricao=$_POST['descricao'];
            
             $dataFinal = implode("-",array_reverse(explode("/",$data)));
 
@@ -40,10 +41,14 @@
             $sql = $conexao_pdo->prepare(
 
             "INSERT INTO bd_agendafin
-            (idviagem, iddespesa, valor, data_lancamento)
+            (idviagem, iddespesa, valor, data_lancamento, descricao)
 
             VALUES
+<<<<<<< HEAD
             ('$idviagem', '$tipo', '{$valor}', '$dataFinal')");
+=======
+            ('$idviagem', '$tipo', '$valor', '$dataFinal','$descricao')");
+>>>>>>> 1f688e07f1196f143c3dc2d81eb5a77e7474feed
                   
                
                 $sql->execute();  }
