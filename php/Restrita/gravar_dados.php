@@ -37,7 +37,10 @@
                 $retorno=$datas["retorno"];
                 
            if($dataFinal < $partida || $dataFinal > $retorno){
-               echo 4;
+               $partidaF = implode("/",array_reverse(explode("-",$partida)));
+               $retornoF = implode("/",array_reverse(explode("-",$retorno)));
+               
+               echo "A data do lançamento deve estar entre $partidaF e $retornoF";
                 die();
            }
                 

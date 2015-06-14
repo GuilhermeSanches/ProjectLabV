@@ -41,7 +41,7 @@ var Index_gravar = {
                         else if(sucess==4){
                             alert("A data do lançamento deve estar entre a data de partida e retorno");
                         }else
-                            alert("Falha ao gravar, consulte suporte tecnico");
+                            alert(sucess);
             		}
 		});
 		
