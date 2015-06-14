@@ -14,9 +14,10 @@ $usuario_bd = 'root';
 $senha_bd   = '';
 $host_db    = 'localhost';
 $conexao_pdo = null;
+$charset = 'utf8';
  
 /* Concatenação das variáveis para detalhes da classe PDO */
-$detalhes_pdo = 'mysql:host=' . $host_db . ';dbname='. $base_dados;
+$detalhes_pdo = 'mysql:host=' . $host_db . ';dbname='. $base_dados.';charset='.$charset;
  
 // Tenta conectar
 try {

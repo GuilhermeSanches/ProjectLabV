@@ -304,7 +304,7 @@ article
 	width: 100%;
 }
 #listaCategoria .remove-icon
-{
+{ 
 	height: 20px;
 }
 #listaCategoria .edit-icon
@@ -315,3 +315,51 @@ article
 {
 	border-radius: 10px;
 }
+
+#configuracao_usuario{
+margin: 0px auto;
+display: none;
+}
+#configuracao_usuario p{
+    font-size: 24px;
+    opacity: 0.6;
+}
+
+
+#user_acc{
+
+border-radius: 10px;
+box-shadow: 10px 10px 10px;
+background:  #097FAD;   
+display: block;    
+width: 450px;
+text-align: center;
+padding: 40px;
+border: 1px solid white;
+margin: 0px auto;    
+}
+#user_acc input{
+    display: block;
+    width: 50%;
+    margin-left: 25%;
+}
+#info{
+    display: block;
+    width: 50%;
+    margin-left: 25%;
+}
+#user_acc label{
+    color: white;
+}
+#user_acc input[type=submit]{
+    width: 50px;
+    margin:  0px auto;
+    cursor: pointer;
+    background: white;
+    padding: 10px;
+    color: #097FAD;
+    border-radius: 5px;
+    margin-top: 10px;
+    border: 0px;
+}
+

@@ -47,7 +47,7 @@
             <!-- Menu Right -->  
             <nav class="nav_right">
                <ul>
-                  <li><a href="#">Configuracões de conta</a></li>
+                  <li><a href="#" id="user_account">Configuracões de conta</a></li>
                   <li><a href="php/Logout/logout.php">Sair</a></li>
                </ul>
             </nav>
@@ -270,11 +270,36 @@
                   </table>
                </div>
             </div>
+            
+            <div id="configuracao_usuario">
+                <p>Configurações de Conta</p>
+                <form action="" name="user_account" id="user_acc" method="post">
+                  <label>Nome</label>  
+                  <input id="nome" name="nome" type="text" class="tf" value="" required />
+                  <label>Sobrenome</label>
+                  <input id="sobrenome" name="sobrenome" type="text" class="tf" value="" required/>
+                  <label>E-mail</label>
+                  <input id="email2" name="email" type="text" class="tf" value="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required/>
+                  <label>Usuario</label>
+                  <input id="user" name="usuario" type="text" class="tf" value="" required/>                
+                  <label>Idade</label>
+                  <input id="idade" name="idade" type="number" class="tf" value="">
+                  <label>+ informações sobre você</label>  
+                  <textarea id="info" name="info" class="tf">  </textarea>
+                  <input id="salvar" type="submit" name="save" value="Salvar" />
+                    
+                    
+                </form>
+                
+            </div>
+            
+            
          </div>
-      </article>
+       </article>
       
       <!-- Scripts -->      
       <script src="js/Utils/dateFormat.js"></script>         
+      <script src="js/Ajax/Restrita/UserAccount.js"></script>     
 <!--  <script src="js/Scroll_Efect/restritajs.js"></script> -->        
       <script src="js/Ajax/Restrita/ajaxGetDados.js"></script>         
       <script src="js/Highchart/jsGrafico1.js"></script>
