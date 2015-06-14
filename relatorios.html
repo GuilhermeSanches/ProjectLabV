@@ -10,6 +10,7 @@
       <link href="css/restrita/restrita.css" rel="stylesheet" />
       <link rel="stylesheet" href="css/frames/frame.css"/>
       <link rel="stylesheet" href="css/restrita/table.css">
+      <link rel="stylesheet" href="css/restrita/relatorio.css">
       
       <!-- Libraries -->
       <script src="js/Libraries/jquery-1-9.js"></script> 
@@ -203,6 +204,17 @@
             </div>
          </div>
          
+        <div id="relatorio_restrita">
+                     <form action="" method="post" name="form_restrita_viagens" id="form_init">
+                        <p>Cadastre uma nova viagem ou escolha uma já cadastrada para visualizar mais detalhes</p>
+                        <select name="comboViagens" id="comboViagens">                         
+                        </select>
+                        <input type="submit" value="Detalhes" name="gerar" id="gerar">
+                        <input type="submit" value="Cadastrar" name="cadViagem" id="cadastrarViagem">
+                        <input type="submit" value="Listar Todas" name="listarRes" id="listarResumo">
+                     </form>
+                  </div>
+         
          <!--Frame Listar Viagens  -->
          <div id="listaViagens">
             <div class="table">
@@ -283,7 +295,7 @@
       <!-- Scripts -->      
       <script src="js/Utils/dateFormat.js"></script>         
       <script src="js/Ajax/Restrita/TravelControllerIndex.js"></script>
-      <script src="js/Scroll_Efect/restritajs.js"></script>
+      <!--  <script src="js/Scroll_Efect/restritajs.js"></script> -->
       <script src="js/Ajax/Restrita/ajaxGetDados.js"></script>
       <script src="js/Highchart/jsGrafico1.js"></script>
       <script src="js/Highchart/jsGraficoRel2.js"></script>
