@@ -29,13 +29,18 @@
 
             }else{
                 
-                $sql_viagem = $conexao_pdo->prepare("select v.id as idvia from bd_cadastro c join bd_viagens v on c.id=v.id_usuario where c.login='{$usuario}'");
+                $sql_viagem = $conexao_pdo->prepare("select v.data_partida as partida, v.data_retorno as retorno from bd_viagens v where v.id='{$idviagem}'");
                 $sql_viagem->execute();
 
-                $viagem = $sql_viagem->fetch(PDO::FETCH_ASSOC);
-                $viagem_id=$viagem["idvia"];
+                $datas = $sql_viagem->fetch(PDO::FETCH_ASSOC);
+                $partida=$datas["partida"];
+                $retorno=$datas["retorno"];
                 
-           
+           if($dataFinal < $partida || $dataFinal > $retorno){
+               echo 4;
+                die();
+           }
+                
                 
                 try{
             $sql = $conexao_pdo->prepare(

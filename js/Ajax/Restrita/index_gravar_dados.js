@@ -38,9 +38,10 @@ var Index_gravar = {
                             
                 		}else if(sucess==3)
                             alert("Você ainda nao tem nenhuma viagem cadastrada");
-                        else{
-                            alert("Falha ao gravar, repita operação!");
-                        }
+                        else if(sucess==4){
+                            alert("A data do lançamento deve estar entre a data de partida e retorno");
+                        }else
+                            alert("Falha ao gravar, consulte suporte tecnico");
             		}
 		});
 		
