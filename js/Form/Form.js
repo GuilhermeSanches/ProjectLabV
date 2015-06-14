@@ -15,7 +15,7 @@ var Form = {
 		
 		for(var i=0; i<form.elements.length; i++) {
 			var element = form.elements[i];																
-					sParams = element.name + "=" + element.value;
+					sParams = element.name + "=" + element.value;            
 					if(sParams) aParams.push(sParams);																					
 		}//fim do for
 

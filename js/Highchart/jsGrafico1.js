@@ -14,7 +14,7 @@ var Resume_highchart = {
     getDadosFinais: function(obj2){
             var dados_finais = new Array;
             for(var i=0;i<12;i++){                
-                dados_finais.push(parseInt(obj2[i].soma));
+                dados_finais.push((parseFloat(obj2[i].soma)));
                 
             }
         return dados_finais;

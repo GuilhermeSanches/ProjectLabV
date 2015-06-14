@@ -13,7 +13,7 @@ inicializar_highchart: function(obj2){
     getDadosFinais: function(obj2){
             var dados_finais = new Array;
             for(var i=0;i<6;i++){                            
-                dados_finais.push(parseInt(obj2[i].media));
+                dados_finais.push(parseFloat(obj2[i].media));
                 
             }
         return dados_finais;

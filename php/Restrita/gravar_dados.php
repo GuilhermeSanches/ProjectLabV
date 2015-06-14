@@ -10,6 +10,9 @@
             $descricao=$_POST['descricao'];
            
             $dataFinal = implode("-",array_reverse(explode("/",$data)));
+
+            
+            
             /* Vamos checar algum erro nos campos */
 
             if ((!$tipo) || (!$valor)){
@@ -41,8 +44,7 @@
             (idviagem, iddespesa, valor, data_lancamento, descricao)
 
             VALUES
-            ('$idviagem', '$tipo', '$valor', '$dataFinal','$descricao')");
-                  
+            ('$idviagem', '$tipo', '$valor', '$dataFinal','$descricao')");            
                
                 $sql->execute();  }
                 catch(PDOException $e){

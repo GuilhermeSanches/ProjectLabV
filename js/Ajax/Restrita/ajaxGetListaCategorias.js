@@ -4,7 +4,7 @@ var CategoriasControler = {
 		CategoriasControler.getData();        //Setar Formulário
         CategoriasControler.setForm_alterar_categoria();
 	},
-        
+ 
 		
 	getData: function() {
              
