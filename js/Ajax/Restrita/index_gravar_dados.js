@@ -34,6 +34,7 @@ var Index_gravar = {
                 			alert("Dados Gravados com Sucesso");
                             document.getElementById('white_content').style.display='none';
                             document.getElementById('black_overlay').style.display='none';
+                            document.form_gravar.reset();
                             
                 		}else if(sucess==3)
                             alert("Você ainda nao tem nenhuma viagem cadastrada");

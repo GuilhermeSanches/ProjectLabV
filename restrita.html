@@ -4,10 +4,12 @@
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
       <!-- Favicon Icon -->
       <link rel="shortcut icon" href="imagens/favicon2.png"/>
+      
       <!-- Styles -->
       <link href="css/restrita/restrita.css" rel="stylesheet" />
       <link rel="stylesheet" href="css/frames/frame.css"/>
       <link rel="stylesheet" href="css/restrita/table.css">
+      
       <!-- Libraries -->
       <script src="js/Libraries/jquery-1-9.js"></script> 
       <script src="js/Security/verifica_sessao.js"></script>  
@@ -18,6 +20,7 @@
    <body>
       <div id="black_overlay"></div>
       <header>
+      
          <!-- Menu Left DropDown -->  
          <nav id="nav" class="nav_left">
             <ul>
@@ -40,6 +43,7 @@
                </li>
                <li onclick="location.href='relatorios.html'">RELATÓRIOS</li>
             </ul>
+         
             <!-- Menu Right -->  
             <nav class="nav_right">
                <ul>
@@ -48,8 +52,10 @@
                </ul>
             </nav>
          </nav>
-         <!-- Fim do Cabeçalho -->         
+         
+      <!-- Fim do Cabeçalho -->         
       </header>
+      
       <!-- Menu Lateral  -->  
       <div id="menu_lateral">
          <div class="menu_lat"><a href="#" onclick="Resume_getDados.inicializar(101);"><img 
@@ -61,6 +67,7 @@
          <div class="menu_lat"><a href="#" onclick="Resume_getDados.inicializar(106);"><img src="imagens/bot_saude_ativo.jpg" alt=""></a></div>
          <div class="menu_lat"><a href="#" onclick="Resume_getDados.inicializar(107);"><img src="imagens/bot_diversos_ativo.jpg" alt=""></a></div>
       </div>
+      
       <!-- Frame Despesas  -->  
       <div id="white_content" class="frame">
          <div class="fechar">
@@ -72,17 +79,20 @@
             <select name="comboViagem" id="comboViagem">
                <option value="aguarde...">Aguarde...</option>
             </select>
+            <label for="Valor">Descrição: </label>
+            <input type="text" name="descricao" required>
             <label>Escolha a Categoria</label>
             <select name="comboCategoria" id="comboCategoria">
                <option value="aguarde...">Aguarde...</option>
             </select>
             <label for="Valor">Valor: </label>
-            <input type="text" name="Valor" pattern="^\\$?(([1-9](\\d*|\\d{0,2}(,\\d{3})*))|0)(\\.\\d{1,2})?$" placeholder="0000,00" required>
+            <input type="text" name="valor" pattern="^\\$?(([1-9](\\d*|\\d{0,2}(,\\d{3})*))|0)(\\.\\d{1,2})?$" placeholder="0000,00" required>
             <label for="">Data: </label>
             <input type="date" name="data_lanc" value="" pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="dd/mm/aaaa" required>
             <input type="submit" name="gravar" id="gravar" value="Gravar">
          </form>
       </div>
+      
       <!-- Frame Viagens  -->  
       <div id="frame_viagem" class="frame">
          <div class="fechar">
@@ -109,6 +119,7 @@
             <input type="submit" name="gravar_viagem" id="gravar_viagem" value="Gravar">           
          </form>
       </div>
+      
       <!-- Frame Categoria -->
       <div id="frame_categoria" class="frame">
          <div class="fechar">
@@ -121,6 +132,7 @@
             <input type="submit" name="gravar_categoria" id="gravar_categoria" value="Gravar">           
          </form>
       </div>
+      
       <!-- Frame Alterar Viagens  -->  
       <div id="frame_alterar_viagem" class="frame">
          <div class="fechar">
@@ -148,6 +160,7 @@
             <input type="submit" name="gravar_viagem" id="gravar_viagem" value="Gravar">           
          </form>
       </div>
+      
       <!-- Frame Alterar Categoria -->
       <div id="frame_alterar_categoria" class="frame">
          <div class="fechar">
@@ -167,7 +180,7 @@
                <div id="conteudo_resumo">
                   <div id="restrita">
                      <form action="" method="post" name="form_restrita_viagens" id="form_init">
-                        <p>Escolha sua viagem para visualizar mais detalhes ou cadastre uma nova viagem</p>
+                        <p>Cadastre uma nova viagem ou escolha uma já cadastrada para visualizar mais detalhes</p>
                         <select name="comboViagens" id="comboViagens">                         
                         </select>
                         <input type="submit" value="Detalhes" name="gerar" id="gerar">
@@ -180,6 +193,7 @@
                </div>
             </div>
             <div  id="container" ></div>
+            
             <!--Frame Listar Viagens  -->
             <div id="listaViagens">
                <div class="table">
@@ -199,6 +213,47 @@
                   </table>
                </div>
             </div>
+      
+         <!--Frame Listar Detalhes das Viagens  -->
+         <div id="detalhesViagens">
+            <div class="table">
+               <span class="title" id="detViagem">Viagem</span>
+               <div class="detLocal">
+                  <span id="detCidade">Cidade</span>
+                  <span id="detPais">Pais</span>
+               </div>
+               <div class="detPeriodo">
+                  <span class="subtitulo">Data Partida:</span>
+                  <span id="detDataPartida"></span>
+                  <span class="subtitulo">Data Retorno:</span>
+                  <span id="detDataRetorno"></span>
+               </div>
+               <div class="detOrcamento">
+                  <span class="subtitulo">Valor Previsto:</span>
+                  <span id="detValorPrevisto"></span>
+                  <span class="subtitulo">Valor Retorno:</span>
+                  <span id="detValorLimite"></span>
+               </div>
+               <fieldset>
+                  <legend>Observação</legend>
+                  <span id="detObservacao"></span>
+               </fieldset>               
+               <table id=tabelaDespesas>
+                  <thead>
+                     <tr>
+                        <th>Descricao</th>
+                        <th>Data Lançamento</th>
+                        <th>Valor</th>
+                        <th>Categoria</th>
+                        <th>Editar</th>
+                        <th>Excluir</th>
+                     </tr>
+                  </thead>
+                  <tbody id="conteudoTabelaDespesas"></tbody>
+               </table>
+            </div>
+         </div>
+                        
             <!--Frame Listar Categorias  -->
             <div id="listaCategoria">
                <div class="table">
@@ -217,7 +272,9 @@
             </div>
          </div>
       </article>
+      
       <!-- Scripts -->      
+      <script src="js/Utils/dateFormat.js"></script>         
       <script src="js/Scroll_Efect/restritajs.js"></script>         
       <script src="js/Ajax/Restrita/ajaxGetDados.js"></script>         
       <script src="js/Highchart/jsGrafico1.js"></script>

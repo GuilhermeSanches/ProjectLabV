@@ -285,6 +285,11 @@ article
 {
 	height: 20px;
 }
+#detalhesViagens
+{
+	display: none;
+	width: 100%;
+}
 #listaCategoria
 {
 	display: none;
