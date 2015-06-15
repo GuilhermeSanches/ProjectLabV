@@ -127,7 +127,7 @@ var DespesasControler = {
                 		}else if(sucess==3)
                             alert("Você já tem uma despesa cadastrada");
                         else{
-                            alert("Falha ao alterar despesa, repita operação!");
+                            alert(sucess);
                         }
                 }
 		});
