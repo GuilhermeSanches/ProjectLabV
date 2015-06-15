@@ -29,6 +29,8 @@ var CategoriasControler = {
         
         document.getElementById('listaViagens').style.display='none';
         
+        document.getElementById('configuracao_usuario').style.display='none';
+        
         var corpo = document.getElementById("conteudoTabelaCategoria"); //cria um corpo
         
         corpo.innerHTML="";
