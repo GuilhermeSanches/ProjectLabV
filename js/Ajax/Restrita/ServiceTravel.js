@@ -3,8 +3,11 @@ var ServiceTravel = {
     //popular combobox de viagens no frame de lançar despesas
     populateComboTravel: function(obj){
         document.form_gravar.comboViagem.options.length = obj.length;
-        for (var i=0; i<obj.length; i++) 
+        document.form_alterar_despesa.alterar_comboViagem.options.length = obj.length;
+        for (var i=0; i<obj.length; i++) {
           document.form_gravar.comboViagem.options[i] = new Option(obj[i].local, obj[i].id_viagem);
+          document.form_alterar_despesa.alterar_comboViagem.options[i] = new Option(obj[i].local, obj[i].id_viagem);
+        }
     },
     
     populateComboTravelRestrita: function(obj){
@@ -126,9 +129,9 @@ var ServiceTravel = {
                 document.getElementById("detValorPrevisto").innerHTML = viagem[0].valor_previsto;
                 document.getElementById("detValorLimite").innerHTML = viagem[0].valor_limite;
                 document.getElementById("detObservacao").innerHTML = viagem[0].observacao;
-                
-                DespesasControler.getDespesaByViagem(viagem[0].id_viagem);
-                
+               
+                DespesasControler.getDespesaByViagem(viagem[0].id_viagem); // busca todas as despesas 
+
                 document.getElementById('container').style.display='none'; //esconde container        
                 document.getElementById('listaViagens').style.display='none';        
                 document.getElementById('listaCategoria').style.display='none';

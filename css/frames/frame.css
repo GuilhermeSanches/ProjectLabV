@@ -12,7 +12,7 @@
 	width: 100%;
 	z-index: 1004;
 }
-#white_content, #frame_viagem, #frame_categoria, #frame_alterar_categoria, #frame_alterar_viagem
+#white_content, #frame_viagem, #frame_categoria, #frame_alterar_categoria, #frame_alterar_viagem, #frame_alterar_despesa
 {
 	background-color: white;
 	border: 16px solid #097FAD;
@@ -47,6 +47,13 @@
 	width: 150px;
 }
 .form_alterar_viagem
+{
+	display: inline;
+	margin: 40px 30% auto;
+	position: absolute;
+	width: 150px;
+}
+.form_alterar_despesa
 {
 	display: inline;
 	margin: 40px 30% auto;

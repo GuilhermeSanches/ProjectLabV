@@ -30,6 +30,14 @@ var Index_frameAlterarViagem = {
     }
 };
 
+var Index_frameAlterarDespesa = {
+
+    abrirFrameAlterarDespesa: function(){
+        document.getElementById('frame_alterar_despesa').style.display='block';
+        document.getElementById('black_overlay').style.display='block';
+    }
+};
+
 var Index_frameAlterarCategoria = {
 
     abrirFrameAlterarCategoria: function(){

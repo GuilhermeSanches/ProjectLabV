@@ -1,12 +1,13 @@
 var DespesasControler = {
-    inicializar: function() {
+    inicializar: function () {
                                                     //inicializa o JS	
-		DespesasControler.setForm_alterar_categoria();
+		DespesasControler.setForm_alterar_despesa();
+        ControllerTravel.inicializar();
+        Index_get_categorias.inicializar();
 	},
         
 	//lista despesa por viagem	
 	getDespesaByViagem: function(idViagem) {
-             
         $.post('php/Restrita/getDespesasByViagem.php', 
            {id_viagem:idViagem},
            DespesasControler.getDados
@@ -49,7 +50,7 @@ var DespesasControler = {
             row.appendChild(cellCategoria);
             
             var cellEditar = document.createElement("td");
-            cellEditar.innerHTML="<a href='#' onclick=DespesasControler.showCategoria("+Despesas[i].id+")><img src='imagens/edit-icon.png' class='edit-icon'></a>";
+            cellEditar.innerHTML="<a href='#' onclick=DespesasControler.showDespesa("+Despesas[i].id+")><img src='imagens/edit-icon.png' class='edit-icon'></a>";
             row.appendChild(cellEditar);
         
             var cellExcluir = document.createElement("td");
@@ -74,57 +75,66 @@ var DespesasControler = {
         return false;
 	},
     
-    //Exibe categoria da tabela que será alterada
-    showCategoria: function(idcategoria) {
+    //Exibe despesa da tabela que será alterada
+    showDespesa: function(idDespesa) {
+        ControllerTravel.inicializar();
+        Index_get_categorias.inicializar();
         $.ajax({			//Função AJAX
-            url:"php/Restrita/getCategoriaById.php",			//Arquivo php
+            url:"php/Restrita/getDespesaById.php",			//Arquivo php
             type:"POST",				//Método de envio
-            data: {id_categoria:idcategoria},	//Dados
+            data: {id_despesa:idDespesa},	//Dados
             dataType: 'json',
-            success: function (categoria){			//Sucesso no AJAX
-                document.getElementById("alterar_descricao").value = categoria[0].descricao;
-                document.getElementById("alterar_id_categoria").value = categoria[0].id_categoria;
-                Index_frameAlterarCategoria.abrirFrameAlterarCategoria();
+            success: function (despesa){			//Sucesso no AJAX
+                
+                document.getElementById("alterar_descricao").value = despesa[0].descricao;
+                document.getElementById("alterar_valor").value = despesa[0].valor;
+                document.getElementById("alterar_data").value = DateFormat.format(despesa[0].data_lancamento);
+                $('#alterar_comboCategoria').val(despesa[0].despesa);
+                $('#alterar_comboViagem').val(despesa[0].viagem);
+                document.getElementById("alterar_id_despesa").value = despesa[0].id;
+                document.getElementById("alterar_despesa_id_viagem").value = despesa[0].viagem;
+                
+                Index_frameAlterarDespesa.abrirFrameAlterarDespesa();
             }
 		});
         return false;
     },
     
-    //ação do submit do formulário alterar categoria
-    setForm_alterar_categoria: function() {
-		var form_categoria = document.form_alterar_categoria;		
-		form_categoria.onsubmit = function() {
+    //ação do submit do formulário alterar despesa
+    setForm_alterar_despesa: function() {
+		var form_despesa = document.form_alterar_despesa;		
+		form_despesa.onsubmit = function() {
             return DespesasControler.atualizar(this);
-                    
 		};
 	},
 	
   
-    //atualizar categoria da tabela
-    atualizar: function(form_categoria) {
-       form_categoria = Form.mergeFormItens(form_categoria);      
-	   $.ajax({			//Função AJAX
-			url:"php/Restrita/alterar_categoria.php",			//Arquivo php
+    //atualizar despesa da tabela
+    atualizar: function(form_despesa) {
+        form_despesa = Form.mergeFormItens(form_despesa);  
+        id_viagem = document.getElementById("alterar_despesa_id_viagem").value;
+        $.ajax({			//Função AJAX
+			url:"php/Restrita/alterar_despesa.php",			//Arquivo php
 			type:"POST",				//Método de envio
-			data: form_categoria,	//Dados
+			data: form_despesa,	//Dados
    			success: function (sucess){			//Sucesso no AJAX
-                		if(sucess==1){						
-                			alert("Categoria Alterada com Sucesso");
-                            document.getElementById('frame_alterar_categoria').style.display='none';
+                        if(sucess==1){						
+                			alert("Despesa Alterada com Sucesso");
+                            document.getElementById('frame_alterar_despesa').style.display='none';
                             document.getElementById('black_overlay').style.display='none';
-                            document.form_alterar_categoria.reset(); //resetar campos do formulário
-                            
-                            DespesasControler.getData(); //atualiza lista de Despesas
-                            
+                            document.form_alterar_despesa.reset(); //resetar campos do formulário
+                            DespesasControler.getDespesaByViagem(id_viagem); //atualiza lista de Despesas    
                 		}else if(sucess==3)
-                            alert("Você já tem uma categoria cadastrada");
+                            alert("Você já tem uma despesa cadastrada");
                         else{
-                            alert("Falha ao alterar categoria, repita operação!");
+                            alert("Falha ao alterar despesa, repita operação!");
                         }
-            		}
+                }
 		});
-		
-		return false;
+        return false;
 	}
     
 };
+
+//inicializa classe
+DespesasControler.inicializar();

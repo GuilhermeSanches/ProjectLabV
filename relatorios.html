@@ -1,17 +1,16 @@
+
+
 <!DOCTYPE html>
 <html>
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-      
       <!-- Favicon Icon -->
       <link rel="shortcut icon" href="imagens/favicon2.png"/>
-      
       <!-- Styles -->
       <link href="css/restrita/restrita.css" rel="stylesheet" />
       <link rel="stylesheet" href="css/frames/frame.css"/>
       <link rel="stylesheet" href="css/restrita/table.css">
       <link rel="stylesheet" href="css/restrita/relatorio.css">
-      
       <!-- Libraries -->
       <script src="js/Libraries/jquery-1-9.js"></script> 
       <script src="js/Libraries/highchart.js"></script>
@@ -22,7 +21,6 @@
    <body>
       <div id="black_overlay"></div>
       <header>
-      
          <!-- Menu Left DropDown -->  
          <nav id="nav" class="nav_left">
             <ul>
@@ -38,8 +36,6 @@
                   <div>LANÇAMENTOS</div>
                   <ul>
                      <li><a href="#" onclick="Index_frame.abrirFrame();ControllerTravel.inicializar();Index_get_categorias.inicializar();">Cadastrar</a></li>
-                     <li><a href="#">Editar</a></li>
-                     <li><a href="#">Excluir</a></li>
                   </ul>
                </li>
                <li>
@@ -51,7 +47,7 @@
                   </ul>
                </li>
                <li onclick="location.href='relatorios.html'">RELATÓRIOS</li>
-            </ul>        
+            </ul>
             <!-- Menu Right -->  
             <nav class="nav_right">
                <ul>
@@ -60,8 +56,7 @@
                </ul>
             </nav>
          </nav>
-         
-         <!-- Fim do Cabeçalho -->         
+      <!-- Fim do Cabeçalho -->         
       </header>
       
       <!-- Menu Lateral  -->  
@@ -74,31 +69,6 @@
          <div class="menu_lat"><a href="#" onclick="Resume_getDados.inicializar(105);"><img src="imagens/bot_lazer_ativo.jpg" alt=""></a></div>
          <div class="menu_lat"><a href="#" onclick="Resume_getDados.inicializar(106);"><img src="imagens/bot_saude_ativo.jpg" alt=""></a></div>
          <div class="menu_lat"><a href="#" onclick="Resume_getDados.inicializar(107);"><img src="imagens/bot_diversos_ativo.jpg" alt=""></a></div>
-      </div>
-      
-      <!-- Frame Despesas  -->  
-      <div id="white_content" class="frame">
-         <div class="fechar">
-            <a href = "javascript:void(0)" onclick ="document.getElementById('white_content').style.display='none';document.getElementById('black_overlay').style.display='none'">Fechar[X]
-            </a>
-         </div>
-         <form action="" class="form_viagem" name="form_gravar" method="post">
-            <label for="">Escolha a viagem</label>
-            <select name="comboViagem" id="comboViagem">
-               <option value="aguarde...">Aguarde...</option>
-            </select>
-            <label for="Valor">Descrição: </label>
-            <input type="text" name="descricao" required>
-            <label>Escolha a Categoria</label>
-            <select name="comboCategoria" id="comboCategoria">
-               <option value="aguarde...">Aguarde...</option>
-            </select>
-            <label for="">Valor: </label>
-            <input type="text" name="valor" pattern="^\\$?(([1-9](\\d*|\\d{0,2}(,\\d{3})*))|0)(\\.\\d{1,2})?$" placeholder="0000,00" required>
-            <label for="">Data: </label>
-            <input type="date" name="data_lanc" value="" pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="dd/mm/aaaa" required>
-            <input type="submit" name="gravar" id="gravar" value="Gravar">
-         </form>
       </div>
       
       <!-- Frame Viagens  -->  
@@ -128,6 +98,30 @@
          </form>
       </div>
       
+      <!-- Frame Despesas  -->  
+      <div id="white_content" class="frame">
+         <div class="fechar">
+            <a href = "javascript:void(0)" onclick ="document.getElementById('white_content').style.display='none';document.getElementById('black_overlay').style.display='none'">Fechar[X]
+            </a>
+         </div>
+         <form action="" class="form_viagem" name="form_gravar" method="post">
+            <label for="">Escolha a viagem</label>
+            <select name="comboViagem" id="comboViagem">
+               <option value="aguarde...">Aguarde...</option>
+            </select>
+            <label for="Valor">Descrição: </label>
+            <input type="text" name="descricao" required>
+            <label>Escolha a Categoria</label>
+            <select name="comboCategoria" id="comboCategoria">
+               <option value="aguarde...">Aguarde...</option>
+            </select>
+            <label for="">Valor: </label>
+            <input type="text" name="valor" pattern="^\\$?(([1-9](\\d*|\\d{0,2}(,\\d{3})*))|0)(\\.\\d{1,2})?$" placeholder="0000,00" required>
+            <label for="">Data: </label>
+            <input type="date" name="data_lanc" value="" pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="dd/mm/aaaa" required>
+            <input type="submit" name="gravar" id="gravar" value="Gravar">
+         </form>
+      </div>
       <!-- Frame Categoria -->
       <div id="frame_categoria" class="frame">
          <div class="fechar">
@@ -169,6 +163,32 @@
          </form>
       </div>
       
+      <!-- Frame Alterar Despesas  -->  
+      <div id="frame_alterar_despesa" class="frame">
+         <div class="fechar">
+            <a href = "javascript:void(0)" onclick ="document.getElementById('frame_alterar_despesa').style.display='none';document.getElementById('black_overlay').style.display='none'">Fechar[X]
+            </a>
+         </div>
+         <form id="form_alterar_despesa" class="form_alterar_despesa" name="form_alterar_despesa" method="post">
+            <label for="">Escolha a viagem</label>
+            <select name="comboViagem" id="alterar_comboViagem" disabled>
+               <option value="aguarde...">Aguarde...</option>
+            </select>
+            <label for="Valor">Descrição: </label>
+            <input type="text" name="descricao" id="alterar_descricao" required>
+            <label>Escolha a Categoria</label>
+            <select name="comboCategoria" id="alterar_comboCategoria">
+               <option value="aguarde...">Aguarde...</option>
+            </select>
+            <label for="Valor">Valor: </label>
+            <input id="alterar_valor" type="text" name="valor" pattern="^\\$?(([1-9](\\d*|\\d{0,2}(,\\d{3})*))|0)(\\.\\d{1,2})?$" placeholder="0000,00" required>
+            <label for="">Data: </label>
+            <input id="alterar_data" type="date" name="data_lanc" value="" pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="dd/mm/aaaa" required>
+            <input type="hidden" name="id_despesa" id="alterar_id_despesa" value="">
+            <input type="hidden" name="id_viagem" id="alterar_despesa_id_viagem" value="">
+            <input type="submit" name="gravar" id="gravar" value="Gravar">
+         </form>
+      </div>
       <!-- Frame Alterar Categoria -->
       <div id="frame_alterar_categoria" class="frame">
          <div class="fechar">
@@ -182,8 +202,10 @@
             <input type="submit" name="gravar_categoria" id="gravar_categoria" value="Alterar">        
          </form>
       </div>
+      
       <article>
-         <div id="conteudo_pagina">
+         
+           <div id="conteudo_pagina">
             <div id="conteudo_total">
                <div id="conteudo_resumo">
                   <div id="relatorio">
@@ -202,40 +224,36 @@
             <div  id="container" >
                <p>Relatórios</p>
             </div>
-            
-            
          </div>
-          <div id="configuracao_usuario">
-                <p>Configurações de Conta</p>
-                <form action="" name="user_account" id="user_acc" method="post">
-                  <label>Nome</label>  
-                  <input id="nome" name="nome" type="text" class="tf" value="" required />
-                  <label>Sobrenome</label>
-                  <input id="sobrenome" name="sobrenome" type="text" class="tf" value="" required/>
-                  <label>E-mail</label>
-                  <input id="email2" name="email" type="text" class="tf" value="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required/>
-                  <label>Usuario</label>
-                  <input id="user" name="usuario" type="text" class="tf" value="" required/>                
-                  <label>Idade</label>
-                  <input id="idade" name="idade" type="number" class="tf" value="">
-                  <label>+ informações sobre você</label>  
-                  <textarea id="info" name="info" class="tf">  </textarea>
-                  <input id="salvar" type="submit" name="save" value="Salvar" />
-                    
-                    
-                </form>
-                
-            </div>
-        <div id="relatorio_restrita">
-                     <form action="" method="post" name="form_restrita_viagens" id="form_init">
-                        <p>Cadastre uma nova viagem ou escolha uma já cadastrada para visualizar mais detalhes</p>
-                        <select name="comboViagens" id="comboViagens">                         
-                        </select>
-                        <input type="submit" value="Detalhes" name="gerar" id="gerar">
-                        <input type="submit" value="Cadastrar" name="cadViagem" id="cadastrarViagem">
-                        <input type="submit" value="Listar Todas" name="listarRes" id="listarResumo">
-                     </form>
-                  </div>
+         
+         <div id="configuracao_usuario">
+            <p>Configurações de Conta</p>
+            <form action="" name="user_account" id="user_acc" method="post">
+               <label>Nome</label>  
+               <input id="nome" name="nome" type="text" class="tf" value="" required />
+               <label>Sobrenome</label>
+               <input id="sobrenome" name="sobrenome" type="text" class="tf" value="" required/>
+               <label>E-mail</label>
+               <input id="email2" name="email" type="text" class="tf" value="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required/>
+               <label>Usuario</label>
+               <input id="user" name="usuario" type="text" class="tf" value="" required/>                
+               <label>Idade</label>
+               <input id="idade" name="idade" type="number" class="tf" value="">
+               <label>+ informações sobre você</label>  
+               <textarea id="info" name="info" class="tf">  </textarea>
+               <input id="salvar" type="submit" name="save" value="Salvar" />
+            </form>
+         </div>
+         <div id="relatorio_restrita">
+            <form action="" method="post" name="form_restrita_viagens" id="form_init">
+               <p>Cadastre uma nova viagem ou escolha uma já cadastrada para visualizar mais detalhes</p>
+               <select name="comboViagens" id="comboViagens">                         
+               </select>
+               <input type="submit" value="Detalhes" name="gerar" id="gerar">
+               <input type="submit" value="Cadastrar" name="cadViagem" id="cadastrarViagem">
+               <input type="submit" value="Listar Todas" name="listarRes" id="listarResumo">
+            </form>
+         </div>
          
          <!--Frame Listar Viagens  -->
          <div id="listaViagens">
@@ -254,7 +272,9 @@
                   </thead>
                   <tbody id="conteudoTabelaViagens"></tbody>
                </table>
-            </div>             
+            </div>
+         </div>
+         
          <!--Frame Listar Detalhes das Viagens  -->
          <div id="detalhesViagens">
             <div class="table">
@@ -272,13 +292,13 @@
                <div class="detOrcamento">
                   <span class="subtitulo">Valor Previsto:</span>
                   <span id="detValorPrevisto"></span>
-                  <span class="subtitulo">Valor Retorno:</span>
+                  <span class="subtitulo">Valor Limite:</span>
                   <span id="detValorLimite"></span>
                </div>
                <fieldset>
                   <legend>Observação</legend>
                   <span id="detObservacao"></span>
-               </fieldset>               
+               </fieldset>
                <table id=tabelaDespesas>
                   <thead>
                      <tr>
@@ -313,27 +333,27 @@
          </div>
          
       </article>
-      
       <!-- Scripts -->      
       <script src="js/Utils/dateFormat.js"></script>         
+      <script src="js/Frames/frame.js"></script>
       <script src="js/Ajax/Restrita/TravelControllerIndex.js"></script>
       <script src="js/Ajax/Restrita/UserAccount.js"></script>     
       <!--  <script src="js/Scroll_Efect/restritajs.js"></script> -->
       <script src="js/Ajax/Restrita/ajaxGetDados.js"></script>
       <script src="js/Highchart/jsGrafico1.js"></script>
       <script src="js/Highchart/jsGraficoRel2.js"></script>
-      <script src="js/Ajax/Restrita/ajaxGetListaDespesas.js"></script>
       <script src="js/Ajax/Restrita/ControllerListTravels.js"></script>
       <script src="js/Ajax/Restrita/ControllerTravel.js"></script>
       <script src="js/Ajax/Restrita/ServiceTravel.js"></script>
       <script src="js/Ajax/Restrita/ajaxGetCategorias.js"></script>
       <script src="js/Ajax/Restrita/ajaxGetListaCategorias.js"></script>
+      <script src="js/Ajax/Restrita/ajaxGetListaDespesas.js"></script>
       <script src="js/Ajax/Restrita/ServiceHtml.js"></script>         
       <script src="js/Ajax/Restrita/index_gravar_dados.js"></script>
       <script src="js/Ajax/Restrita/index_gravar_viagem.js"></script>
       <script src="js/Ajax/Restrita/index_gravar_categoria.js"></script>
-      <script src="js/Frames/frame.js"></script>
       <script src="js/Form/Form.js"></script>
       <script src="js/Security/verifica_sessao.js"></script> 
    </body>
 </html>
+
