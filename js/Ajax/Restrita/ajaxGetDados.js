@@ -9,10 +9,11 @@ var Resume_getDados = {
 
 	inicializar: function(categoria) {
         document.getElementById('conteudo_resumo').style.display='inline-block';
-        document.getElementById('container').style.display='inline-block'; //esconde container
+        document.getElementById('container').style.display='inline-block';
         document.getElementById('listaViagens').style.display='none';
         document.getElementById('listaCategoria').style.display='none';
         document.getElementById('detalhesViagens').style.display='none';
+        document.getElementById('configuracao_usuario').style.display='none';
                                 
 		Resume_getDados.getData(categoria);       
 
