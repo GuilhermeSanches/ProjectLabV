@@ -375,4 +375,20 @@ margin: 0px auto;
     margin-top: 10px;
     border: 0px;
 }
-
+#welcomeUser{
+    position: absolute;
+    color: white;
+    font-size: 18px;
+    top: -7px;    
+    float: right;
+    width: 250px;
+    padding: 3px;
+    
+}
+#welcomeUser:hover{
+    
+    background: none;
+    cursor: auto;
+    opacity: 1;
+    
+}

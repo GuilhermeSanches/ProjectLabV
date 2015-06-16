@@ -23,7 +23,8 @@ var Index_cadastrar = {
 	
 	checkSubmit: function(form) {
 
-    form = Form.mergeFormItens(form);      
+    form = Form.mergeFormItens(form);    
+        
         
 	$.ajax({			                      //Função AJAX
 			url:"php/Cadastro/cadastrar.php", //Arquivo php

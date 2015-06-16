@@ -20,7 +20,7 @@
    <body>
       <div id="black_overlay"></div>
       <header>
-      
+   
          <!-- Menu Left DropDown -->  
          <nav id="nav" class="nav_left">
             <ul>
@@ -42,14 +42,21 @@
                <li onclick="location.href='relatorios.html'">RELATÓRIOS</li>
             </ul>
          
+          
             <!-- Menu Right -->  
             <nav class="nav_right">
-               <ul>
+               <ul>                  
                   <li><a href="#" id="user_account">Configuracões de conta</a></li>
                   <li><a href="php/Logout/logout.php">Sair</a></li>
                </ul>
             </nav>
+                <nav>
+               <ul>
+               <li><div id="welcomeUser"></div></li>                              
+            </ul>
+       </nav>
          </nav>
+         
          
       <!-- Fim do Cabeçalho -->         
       </header>
@@ -319,6 +326,7 @@
          </div>
        </article>
       
+      
       <!-- Scripts -->      
       <script src="js/Utils/dateFormat.js"></script>         
       <script src="js/Frames/frame.js"></script>
@@ -337,5 +345,6 @@
       <script src="js/Ajax/Restrita/index_gravar_viagem.js"></script>
       <script src="js/Ajax/Restrita/index_gravar_categoria.js"></script>
       <script src="js/Form/Form.js"></script>
+      <script src="js/Security/verifica_sessao.js"></script> 
    </body>
 </html>

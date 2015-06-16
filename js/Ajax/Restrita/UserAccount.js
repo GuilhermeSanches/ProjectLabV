@@ -25,6 +25,7 @@ var UserAccount = {
         }
         UserAccount.getDadosUser();
         UserAccount.addListener();
+        Sessao_checked.init();
     
     },
     addListener:function(){

@@ -94,7 +94,11 @@
                 
             echo "Ocorreu um erro ao criar sua conta, entre em contato.";
 
-            }else{                                                                       
+            }else{     
+                
+                
+                unset($_SESSION['sessao_user']);
+                $_SESSION['sessao_user'] = $usuario;
                 echo 1;
                                                          
             }
