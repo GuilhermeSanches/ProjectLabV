@@ -5,9 +5,10 @@ session_checker();
 
  function session_checker(){  
      
-     if (!isset($_SESSION['sessao'])){  
-     exit();
-         echo 0;
+     if (!isset($_SESSION['sessao_id_user'])){  
+         
+         
+         echo 0;                   
      
     }else{
          

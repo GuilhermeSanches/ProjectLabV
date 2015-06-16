@@ -12,7 +12,7 @@ var Sessao_checked = {
     },
     
     validateReturn: function(returno){
-            if(returno===0){               
+            if(returno==0){               
             location.href='index.html';
         }else{
             document.getElementById('welcomeUser').innerHTML = 'Bem vindo '+returno;
