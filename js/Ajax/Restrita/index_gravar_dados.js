@@ -15,7 +15,16 @@ var Index_gravar = {
 	setForm_gravar: function() {
 		var form_gravar = document.form_gravar;		
 		form_gravar.onsubmit = function() {
+            var results   = ControllerIsNumber.isNumber(this.valor);
+            
+            if(results==1){           
             return Index_gravar.checkSubmit_gravar(this);
+            }
+            else{
+            alert("Os campos de valores devem ser Numéricos!");              
+            }                    
+            
+            
                     
 		};
 	},

@@ -104,7 +104,16 @@ var DespesasControler = {
     setForm_alterar_despesa: function() {
 		var form_despesa = document.form_alterar_despesa;		
 		form_despesa.onsubmit = function() {
-            return DespesasControler.atualizar(this);
+            
+            var results   = ControllerIsNumber.isNumber(this.valor);
+            
+            if(results==1){           
+             return DespesasControler.atualizar(this);
+            }
+            else{
+            alert("Os campos de valores devem ser Numéricos!");              
+            }                                                      
+           
 		};
 	},
 	
