@@ -72,7 +72,11 @@ var CategoriasControler = {
         if(confirm("Deseja realmente remover esta categoria?")){
             
             $.post('php/Restrita/remover_categoria.php', 
-               {id_categoria:idcategoria},alert("Categoria excluida com sucesso")
+               {id_categoria:idcategoria},
+                function(retorno){
+                if(retorno==1){
+                alert("Categoria excluida com sucesso");}
+                    else if(retorno==0){alert("Você nao pode excluir esta categoria pois existem lançamentos efetuados nela");}}
             );
             CategoriasControler.getData();			
         }
