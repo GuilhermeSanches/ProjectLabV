@@ -14,15 +14,23 @@ var Index_cadastrar = {
 	setForm: function() {
 		var form = document.cadastro;
 		
-		form.onsubmit = function() {
-            return Index_cadastrar.checkSubmit(this);
-                    
-		};
+		form.addEventListener('submit', function(event) {
+            
+            var results  = COntrollerValidPass.validacaoPass(this);
+            if(results==1){           
+            Index_cadastrar.checkSubmit(form);
+            }
+            else{
+            alert("As senhas nao conferem");
+            
+            }
+            event.preventDefault();
+});
 	},
 	
 	
 	checkSubmit: function(form) {
-
+        
     form = Form.mergeFormItens(form);    
         
         
