@@ -9,7 +9,7 @@
             $pais = $_POST['pais'];
             $dataPartida=$_POST['dateCheckin'];
             $dataRetorno=$_POST['dateCheckout'];
-            $valorP = $_POST['valorP'];
+            $valorP = $_POST['valorPi'];
             $valorL = $_POST['valorL'];
             $observacao = $_POST['observacao'];
     

@@ -11,7 +11,7 @@ var ServiceTravel = {
     },
     
     populateComboTravelRestrita: function(obj){
-        if(obj[0].local===''){
+        if(obj==''){
           document.form_restrita_viagens.comboViagens.options[0] = new Option("Você ainda nao tem viagem cadastrada", 1);
         }else{     
           document.form_restrita_viagens.comboViagens.options.length = obj.length;
@@ -46,7 +46,8 @@ var ServiceTravel = {
             $.post('php/Restrita/remover_viagem.php', 
                {id_viagem:idviagem},alert("Viagem excluida com sucesso")
             );
-            ViagensControler.getData();			
+            ViagensControler.inicializar();			
+            ControllerTravel.openRequest();
         }
         return false;
 	},

@@ -6,20 +6,26 @@
 
 var Index_gravar_viagem = {
     
-	init_gravar_viagem: function() {	//inicializa o JS	        
-		Index_gravar_viagem.setForm_gravar_viagem();        //Setar Formulário
+	init_gravar_viagem: function() {	                
+		Index_gravar_viagem.setForm_gravar_viagem();
         
 	},
-
     
-	setForm_gravar_viagem: function() {
+    setForm_gravar_viagem: function() {
 		var form_viagem = document.form_viagem;		
 		form_viagem.onsubmit = function() {
-            return Index_gravar_viagem.checkSubmit_gravar_viagem(this);
-                    
+            var results   = ControllerIsNumber.isNumber(this.valorPi);
+            var results2  = ControllerIsNumber.isNumber(this.valorL);
+            if(results==1 && results2==1){           
+             return Index_gravar_viagem.checkSubmit_gravar_viagem(this);
+            }
+            else{
+            alert("Os campos de valores devem ser Numéricos!");              
+            }                                                      
 		};
 	},
-	
+    
+   
 	
 	checkSubmit_gravar_viagem: function(form_viagem) {        
     form_viagem = Form.mergeFormItens(form_viagem);      
@@ -34,10 +40,13 @@ var Index_gravar_viagem = {
                             document.getElementById('frame_viagem').style.display='none';
                             document.getElementById('black_overlay').style.display='none';
                             document.form_viagem.reset(); //resetar campos do formulário
-                            document.reload;
+                            ControllerTravel.openRequest();
                             
-                		}else if(sucess==2)
-                            alert("Você já tem uma viagem cadastrada neste intervalo de datas");
+                		}else if(sucess==2){
+                            alert("Você já tem uma viagem cadastrada neste intervalo de datas");  
+                            document.form_viagem.dateCheckin.value='';
+                            document.form_viagem.dateCheckout.value='';
+                        }
                         else{
                             alert("Falha ao gravar, repita operação!teste");
                         }
