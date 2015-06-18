@@ -35,7 +35,7 @@ var Resume_getDados = {
     
     getDados: function(dados){   
         var obj = new Array();
-        alert(dados);
+        
          obj = JSON.parse(dados);  
         
         
