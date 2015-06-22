@@ -254,25 +254,34 @@
                <span class="title" id="detViagem">Viagem</span>
                <div class="detLocal">
                   <span id="detCidade">Cidade</span>
+                  <span>-</span>
                   <span id="detPais">Pais</span>
                </div>
                <div class="detPeriodo">
-                  <span class="subtitulo">Data Partida:</span>
-                  <span id="detDataPartida"></span>
-                  <span class="subtitulo">Data Retorno:</span>
-                  <span id="detDataRetorno"></span>
+                  <div class="coluna1">
+                     <span class="subtitulo">Data Partida:</span>
+                     <span id="detDataPartida"></span>
+                  </div>
+                  <div class="coluna2">
+                     <span class="subtitulo">Data Retorno:</span>
+                     <span id="detDataRetorno"></span>
+                  </div>
                </div>
                <div class="detOrcamento">
-                  <span class="subtitulo">Valor Previsto:</span>
-                  <span id="detValorPrevisto"></span>
-                  <span class="subtitulo">Valor Limite:</span>
-                  <span id="detValorLimite"></span>
+                  <div class="coluna1">
+                     <span class="subtitulo">Valor Previsto:</span>
+                     <span id="detValorPrevisto"></span>
+                  </div>
+                  <div class="coluna2">
+                     <span class="subtitulo">Valor Limite:</span>
+                     <span id="detValorLimite"></span>
+                  </div>
                </div>
                <fieldset>
                   <legend>Observação</legend>
                   <span id="detObservacao"></span>
                </fieldset>               
-               <table id=tabelaDespesas>
+               <table id="tabelaDespesas">
                   <thead>
                      <tr>
                         <th>Descricao</th>
@@ -285,6 +294,10 @@
                   </thead>
                   <tbody id="conteudoTabelaDespesas"></tbody>
                </table>
+               <div class="total">
+                  <span class="subtitulo">Total Despesas:</span>
+                  <span id="total"></span>
+               </div>
             </div>
          </div>
                         

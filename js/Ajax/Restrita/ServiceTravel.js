@@ -135,6 +135,12 @@ var ServiceTravel = {
                 document.getElementById("detValorLimite").innerHTML = viagem[0].valor_limite;
                 document.getElementById("detObservacao").innerHTML = viagem[0].observacao;
                
+                if(viagem[0].total==null){
+                  document.getElementById("total").innerHTML = '0.00';
+                }else{
+                  document.getElementById("total").innerHTML = viagem[0].total;
+                }
+               
                 DespesasControler.getDespesaByViagem(viagem[0].id_viagem); // busca todas as despesas 
 
                 document.getElementById('container').style.display='none'; //esconde container        

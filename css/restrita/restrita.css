@@ -415,3 +415,24 @@ margin: 0px auto;
     opacity: 1;
     
 }
+.subtitulo{
+	font-weight: bolder;
+}
+.coluna1{
+	width: 300px;
+	display: block;
+	float: left;
+}
+.coluna2{
+	width: 500px;
+}
+.detLocal, .total{
+	font-size: 25px;
+	margin: 10px 5px;
+}
+.detPeriodo{
+	margin-bottom: 5px;
+}
+fieldset{
+	width: 650px;
+}
