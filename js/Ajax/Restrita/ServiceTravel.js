@@ -1,5 +1,9 @@
 var ServiceTravel = {
-                
+       inicializar: function() {
+                                                   
+		ServiceTravel.setBotaoDetalhe();
+	},
+   
     //popular combobox de viagens no frame de lançar despesas
     populateComboTravel: function(obj){
         document.form_gravar.comboViagem.options.length = obj.length;
@@ -140,6 +144,17 @@ var ServiceTravel = {
             }
 		});
         return false;
-    }
+    },
+   
+   setBotaoDetalhe: function(){
+      var botao = document.getElementById('detalharViagem');
+      botao.addEventListener('click', function(){
+         var comboBox = document.getElementById('comboViagens');
+         var idViagem = comboBox.options[comboBox.selectedIndex].value;
+         ServiceTravel.showDetalheViagem(idViagem);
+      });
+   }
 
 };
+
+window.onload = ServiceTravel.inicializar();

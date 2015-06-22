@@ -31,6 +31,8 @@ var CategoriasControler = {
         
         document.getElementById('configuracao_usuario').style.display='none';
         
+        document.getElementById('detalhesViagens').style.display='none';
+        
         var corpo = document.getElementById("conteudoTabelaCategoria"); //cria um corpo
         
         corpo.innerHTML="";
