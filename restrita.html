@@ -349,17 +349,19 @@
                 </form>
                 
                 <p>Desativar Conta</p>   
-                <form action="" id="DelAccount">
+                <form action="" id="DelAccount" method="post">
                                                
-                Deseja desativar sua Conta?
-                <input id="delAccount" type="submit" name="delAccount" value="Desativar" />                    
+                Deseja desativar sua Conta*?
+                <input id="delAccount" type="submit" name="delAccount" value="Desativar" />
+                *Desativando sua conta, voce não terá mais acesso à ela, porém, para reativar, basta fazer login novamente e seguir as instruções!                    
                 </form>
             </div>                        
          </div>
        </article>
       
       
-      <!-- Scripts -->      
+      <!-- Scripts -->  
+      <script src="js/Ajax/Cadastro/controllerAccountDelet.js"></script>                 
       <script src="js/ValidacoesForm.js/validacaoPass.js"></script>             
       <script src="js/Ajax/Restrita/UserAccount.js"></script>             
       <script src="js/Ajax/Restrita/userPass.js"></script>     

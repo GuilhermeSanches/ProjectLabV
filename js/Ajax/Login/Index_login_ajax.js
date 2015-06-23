@@ -29,11 +29,15 @@ var Index_login = {
 			url:"php/Login/verifica_usuario.php",			//Arquivo php
 			type:"POST",				//Método de envio
 			data: form_login,	//Dados
-   			success: function (sucess){			//Sucesso no AJAX
+   			success: function (sucess){	                
                 		if(sucess==1){						
                 			location.href='restrita.html';
                         
-                		}else{
+                		}else if(sucess==7){
+                            location.href='restritaAccountDelet.html';
+                        }
+                
+                        else if(sucess==0){
                             alert("Login e/ou Senha Incorretos!");
                         }
             		}

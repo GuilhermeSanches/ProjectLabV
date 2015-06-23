@@ -251,6 +251,27 @@
                <textarea id="info" name="info" class="tf">  </textarea>
                <input id="salvar" type="submit" name="save" value="Salvar" />
             </form>
+            
+             <p>Alteração de Senha</p>   
+                <form name="form_senha_alter" action="" id="alterPass" method="post">
+                                               
+                Senha Atual                
+                 <input id="passAtual" name="passA" type="password" class="tf" value="" required/>  
+                Nova Senha                
+                <input id="passNew" name="passN" type="password" class="tf" value="" required/>
+                Repita a senha                
+                <input id="passNewReq" name="passN2" type="password" class="tf" value="" required/> 
+                                 
+                <input type="submit" value="Gravar" id="gravarPass">
+                </form>
+                
+                <p>Desativar Conta</p>   
+                <form action="" id="DelAccount">
+                                               
+                Deseja desativar sua Conta*?
+                <input id="delAccount" type="submit" name="delAccount" value="Desativar" />
+                *Desativando sua conta, voce não terá mais acesso à ela, porém, para reativar, basta fazer login novamente e seguir as instruções!                    
+                </form>
          </div>
          <div id="relatorio_restrita">
             <form action="" method="post" name="form_restrita_viagens" id="form_init">
@@ -353,11 +374,14 @@
          </div>
          
       </article>
-      <!-- Scripts -->      
+      <!-- Scripts --> 
+      <script src="js/Ajax/Cadastro/controllerAccountDelet.js"></script>                 
+      <script src="js/ValidacoesForm.js/validacaoPass.js"></script>             
+      <script src="js/Ajax/Restrita/UserAccount.js"></script>             
+      <script src="js/Ajax/Restrita/userPass.js"></script>          
       <script src="js/Utils/dateFormat.js"></script>         
       <script src="js/Frames/frame.js"></script>
-      <script src="js/Ajax/Restrita/TravelControllerIndex.js"></script>
-      <script src="js/Ajax/Restrita/UserAccount.js"></script>           
+      <script src="js/Ajax/Restrita/TravelControllerIndex.js"></script>               
       <script src="js/Ajax/Restrita/ajaxGetDados.js"></script>
       <script src="js/Highchart/jsGrafico1.js"></script>
       <script src="js/Highchart/jsGraficoRel2.js"></script>

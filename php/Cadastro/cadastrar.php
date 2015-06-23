@@ -110,10 +110,10 @@
             $sql = $conexao_pdo->prepare(
 
             "INSERT INTO bd_cadastro
-            (nome, sobrenome, login, email, senha, idade, info, data_ultimo_login, ativo)
+            (nome, sobrenome, login, email, senha, idade, info, data_ultimo_login, ativo, desativado)
 
             VALUES
-            ('$nome', '$sobrenome', '$usuario', '$email', '$senha', '$idade', '$info', now(),'0' )");
+            ('$nome', '$sobrenome', '$usuario', '$email', '$senha', '$idade', '$info', now(),'0', '0')");
                   
                
                 $sql->execute();  }

@@ -9,14 +9,22 @@
                     
                                     
                     
-                    $sql = $conexao_pdo->prepare("SELECT id, ativo FROM bd_cadastro  WHERE LOGIN='{$usuario}' AND SENHA='{$senha}'            "); //prepara o sql que ira verificar se existe o usuario e a senha                  
+                    $sql = $conexao_pdo->prepare("SELECT id, ativo, desativado FROM bd_cadastro  WHERE LOGIN='{$usuario}' AND SENHA='{$senha}'            "); //prepara o sql que ira verificar se existe o usuario e a senha                  
                     $sql->execute();//
                     $num = $sql->rowCount();
                     $ativo = $sql->fetch(PDO::FETCH_ASSOC);
                     $ativo_checked = $ativo["ativo"];
+                    $desativado_checked = $ativo["desativado"];
+                    $id = $ativo["id"];
                   
+                    if($desativado_checked==1){
+                        $_SESSION['sessao_id_user'] = $id;
+                        echo 7;                        
+                        die();
+                    }else{
+                
 
-                   if ($num>0 and $ativo_checked==1){
+                   if ($num>0 and $ativo_checked==1 and $desativado_checked==0){
                         
                        
                      
@@ -56,7 +64,7 @@
                     else{
                             echo 0;
                     }
-
+                        }
                     
                 
                     ?>
