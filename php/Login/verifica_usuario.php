@@ -4,7 +4,7 @@
 
                      include "../Conexao/config.php";
 
-                    $usuario = $_POST['usuario'];  //pega variavel do ajax
+                    $usuario = addslashes($_POST['usuario']);  //pega variavel do ajax
                     $senha = md5($_POST['senha']);       
                     
                                     
