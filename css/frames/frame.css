@@ -17,21 +17,20 @@
 	background-color: white;
 	border: 16px solid #097FAD;
 	display: none;
-	height: 50%;
+	height: 70%;
 	left: 25%;
 	overflow: auto;
-	padding: 16px;
+	padding: 6px;
 	position: absolute;
-	top: 25%;
+	top: 10%;
 	width: 50%;
 	z-index: 1005;
 }
-.form_viagem
+.form_viagem, #form_despesas
 {
-	display: inline;
-	margin: 40px 30% auto;
-	position: absolute;
-	width: 150px;
+		
+	margin: -10px auto;
+	
 }
 .fechar
 {
@@ -66,4 +65,37 @@
 	margin: 40px 30% auto;
 	position: absolute;
 	width: 150px;
+}
+.form_viagem, #form_despesas{
+    
+    width: 150px;    
+                   
+}
+.form_viagem input, #form_despesas input{
+    float: right;
+    border-radius: 5px;        
+    border: 0px solid;
+    background: #CACAD9;
+    width: 150px;
+}
+.form_viagem label{
+    float: left;                
+}
+#form_despesas select, .form_viagem select{
+    width: 150px;   
+
+}
+#form_despesas label, #form_despesas select{
+    float: left;
+    display: block;
+    padding: 4px;
+    
+}
+#form_despesas, .form_viagem{
+    margin-top: 10px;
+}
+#form_despesas input[type=submit], .form_viagem input[type=submit]{
+    margin-top: 10px;
+    padding: 7px;
+    width: 50px;
 }

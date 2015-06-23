@@ -78,8 +78,8 @@
          <div class="fechar">
             <a href = "javascript:void(0)" onclick = "document.getElementById('frame_viagem').style.display='none';document.getElementById('black_overlay').style.display='none'">Fechar[X]</a>
          </div>
-         <form action="" id="form_viagem" name="form_viagem" class="form_viagem" method="post">
-            <label>Cadastro de Viagens</label>
+         <label>Cadastro de Viagens</label>
+         <form action="" id="form_viagem" name="form_viagem" class="form_viagem" method="post">            
             <label for="">Local: </label>
             <input type="text" name="local" required>
             <label for="">Cidade: </label>
@@ -106,8 +106,9 @@
             <a href = "javascript:void(0)" onclick ="document.getElementById('white_content').style.display='none';document.getElementById('black_overlay').style.display='none'">Fechar[X]
             </a>
          </div>
-         <form action="" class="form_viagem" name="form_gravar" method="post">
-            <label for="">Escolha a viagem</label>
+         
+         <form action="" id="form_despesas" name="form_gravar" method="post">
+         <label for="">Escolha a viagem</label>   
             <select name="comboViagem" id="comboViagem">
                <option value="aguarde...">Aguarde...</option>
             </select>
@@ -130,7 +131,7 @@
          <div class="fechar">
             <a href = "javascript:void(0)" onclick = "document.getElementById('frame_categoria').style.display='none';document.getElementById('black_overlay').style.display='none'">Fechar[X]</a>
          </div>
-         <form action="" id="form_categoria" name="form_categoria" class="form_categoria" method="post">
+         <form action="" id="form_categoria" name="form_categoria" class="form_viagem" method="post">
             <label>Cadastro de Categorias</label>
             <label for="">Descrição: </label>
             <input type="text" name="descricao" required>
@@ -143,8 +144,9 @@
          <div class="fechar">
             <a href = "javascript:void(0)" onclick = "document.getElementById('frame_alterar_viagem').style.display='none';document.getElementById('black_overlay').style.display='none'">Fechar[X]</a>
          </div>
-         <form action="" id="form_alterar_viagem" name="form_alterar_viagem" class="form_alterar_viagem" method="post">
-            <label>Editar Viagens</label>
+         <label>Editar Viagens</label>
+         <form action="" id="form_alterar_viagem" name="form_alterar_viagem" class="form_viagem" method="post">
+            
             <label for="">Local: </label>
             <input type="text" name="local" id="alterar_local"required>
             <label for="">Cidade: </label>
@@ -172,7 +174,7 @@
             <a href = "javascript:void(0)" onclick ="document.getElementById('frame_alterar_despesa').style.display='none';document.getElementById('black_overlay').style.display='none'">Fechar[X]
             </a>
          </div>
-         <form id="form_alterar_despesa" class="form_alterar_despesa" name="form_alterar_despesa" method="post">
+         <form id="form_alterar_despesa" class="form_viagem" name="form_alterar_despesa" method="post">
             <label for="">Escolha a viagem</label>
             <select name="comboViagem" id="alterar_comboViagem" disabled>
                <option value="aguarde...">Aguarde...</option>
