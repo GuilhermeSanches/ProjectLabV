@@ -38,7 +38,7 @@ var Index_login = {
                         }
                 
                         else if(sucess==0){
-                            alert("Login e/ou Senha Incorretos!");
+                           document.getElementById('resultLogin').innerHTML = 'Usuário e/ou senha Incoretos!';
                         }
             		}
 		});

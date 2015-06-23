@@ -297,3 +297,9 @@ body
 	width: 100%;
 	z-index: 1001;
 }
+
+#resultLogin{
+    margin-left: 200px;
+    color: red;
+    
+}
